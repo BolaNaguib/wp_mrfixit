@@ -1,0 +1,24 @@
+.nav_type-top {
+  color: #fff;
+  padding: 10px 0px;
+  border-bottom: 1px solid #f2a700;
+  background-color: $color__secondary;
+
+  & a {
+    color: inherit;
+    font-size: 32px;
+
+    @include mediaquery_size_m() {
+      font-size: 16px;
+    }
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+.nav_type-main {
+  padding: 20px 0px;
+  border-bottom: 1px solid $color__primary;
+  background-color: $color__primary;
+}

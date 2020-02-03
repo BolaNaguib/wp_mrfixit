@@ -1,0 +1,87 @@
+.section_type-footer {
+  background-image: url("http://www.creativethemes.co.in/buy-creativetheme-html-template/home-builder/template-multipage/assets/imgs/backgrounds/footer.jpg");
+  background-color: $color__primary;
+  color: #fff;
+}
+
+.section_type-hero {
+  color: #fff;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, #0000008c, #00000059);
+    z-index: 0;
+    opacity: 0.9;
+  }
+  & * {
+    color: #fff;
+  }
+  & h1 {
+    text-shadow: 3px 3px #000;
+  }
+  & .callback {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 32px;
+    background-color: #002e5b;
+    color: #fff;
+    text-shadow: 1px 2px #000;
+    box-shadow: 0px 30px 20px -20px #000;
+    border-radius: 10px;
+  }
+}
+// .section_type-normal {
+//   color: #fff;
+//   position: relative;
+//   margin-top: 77px;
+//   background-position: center;
+//   background-size: cover;
+//   @include mediaquery_size_s(){
+//     margin-top: 120px;
+
+//   }
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     display: block;
+//     right: 0;
+//     bottom: 0;
+//     background: #05385a;
+//     z-index: 0;
+//     opacity: 0.9;
+//   }
+//   & * {
+//     color: #fff;
+//   }
+// }
+
+// .section_type-cta {
+//   padding: 45px;
+//   & h2 {
+//     color: $color__primary;
+//   }
+//   & a {
+//     z-index: 1;
+//     position: relative;
+//     color: $color__secondary;
+//   }
+//   &.section_theme-blue {
+//     & h2 {
+//       color: #fff;
+//     }
+//     & a {
+//       z-index: 1;
+//       position: relative;
+//       color: #fff;
+//     }
+//   }
+// }

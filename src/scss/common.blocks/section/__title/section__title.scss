@@ -1,0 +1,12 @@
+.section__title{
+    position: relative;
+    padding: 15px 0px;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    
+    & span {
+        color: $color__secondary;
+    }
+}

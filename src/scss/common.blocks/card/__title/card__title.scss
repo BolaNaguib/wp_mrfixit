@@ -1,0 +1,9 @@
+.card__title {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  color: inherit;
+  & span{
+      color: $color__secondary;
+  }
+}
