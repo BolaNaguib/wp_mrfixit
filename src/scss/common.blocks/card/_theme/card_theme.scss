@@ -17,7 +17,7 @@
         margin-right: 10px;
         color: #d29100;
       }
-      & b {
+      & small {
         // text-shadow: 2px 2px #000;
       }
     }
@@ -45,8 +45,11 @@
         font-size: 8px;
         margin-right: 10px;
         color: #d29100;
+        & i {
+            min-width: unset !important;
+          }
       }
-      & b {
+      & small {
         text-shadow: 2px 2px #000;
       }
     }

@@ -36,7 +36,7 @@ $full_width = get_field( 'full_width' );
           <?php while (have_rows('lists')) : the_row(); ?>
           <?php $list = get_sub_field( 'list' ); ?>
               <li class="uk-flex uk-flex-middle">
-                <span><i class="fas fa-chevron-right"></i></span> <b><?php echo $list ;?></b>
+                <span><i class="fas fa-chevron-right"></i></span> <small><?php echo $list ;?></small>
               </li>
           <?php endwhile; ?>
           </ul>
