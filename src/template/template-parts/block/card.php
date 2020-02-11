@@ -10,7 +10,6 @@ $card_theme = get_field('card_theme');
 $section_theme = get_field('section_theme');
 $section_id = get_field( 'section_id' );
 $full_width = get_field( 'full_width' );
-
 ?>
 <!-- START section CARD -->
 <div id="<?php echo $section_id;?>" class='section <?php if($full_width): ?> full-width <?php else: ?> <?php endif; ?>  <?php if ($section_theme) : ?> section_theme-blue <?php else : ?> section_theme-white <?php endif; ?>'>
@@ -32,6 +31,16 @@ $full_width = get_field( 'full_width' );
           <h2 class="card__title"> <?php echo $card_title; ?> <span> <?php echo $city; ?> </span></h2>
           <hr class="hr_type-small">
           <?php echo $content; ?>
+          <?php if (have_rows('lists')) : ?>
+            <ul class="uk-grid uk-grid-small uk-child-width-1-2@m">
+          <?php while (have_rows('lists')) : the_row(); ?>
+          <?php $list = get_sub_field( 'list' ); ?>
+              <li class="uk-flex uk-flex-middle">
+                <span><i class="fas fa-chevron-right"></i></span> <b><?php echo $list ;?></b>
+              </li>
+          <?php endwhile; ?>
+          </ul>
+          <?php endif; ?>
         </div>
         <?php endif; ?>
 

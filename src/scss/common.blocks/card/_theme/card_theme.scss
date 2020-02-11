@@ -8,6 +8,20 @@
     &  h3 {
         color: #000;
     }
+    & ul {
+        & li {
+        //   color: #fafafa;
+          margin: 10px 0px;
+          & span {
+            font-size: 8px;
+            margin-right: 10px;
+            color: #d29100;
+          }
+          & b {
+            // text-shadow: 2px 2px #000;
+          }
+        }
+      }
 
 }
 
@@ -23,5 +37,19 @@
     & i{
         min-width: 35px;
     }
+    & ul {
+        & li {
+          color: #fafafa;
+          margin: 10px 0px;
+          & span {
+            font-size: 8px;
+            margin-right: 10px;
+            color: #d29100;
+          }
+          & b {
+            text-shadow: 2px 2px #000;
+          }
+        }
+      }
     
 }
