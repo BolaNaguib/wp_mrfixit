@@ -26,7 +26,7 @@
 </head>
 <!-- END head -->
 <!-- START body -->
-<nav class="nav" >
+<nav class="nav">
   <!-- START nav_type-main -->
   <div class='nav_type-main'>
     <!-- START uk-container -->
@@ -34,7 +34,7 @@
       <div class="uk-navbar" uk-navbar>
         <div class="uk-navbar-left">
           <a style="color:#fff; FONT-WEIGHT: bold;" href="/">
-           MrFixitDoors
+            MrFixitDoors
             <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>">
           </a>
 
@@ -43,20 +43,29 @@
         <div class="uk-navbar-right">
 
           <ul class="uk-navbar-nav uk-visible@m">
-          <li><a class="nav__link" href="#">Home</a></li>
-          <li><a class="nav__link" href="#">Services</a></li>
-          <li><a class="nav__link" href="#">About Us</a></li>
-          <li><a class="nav__link" href="#">Contact Us</a></li>
-
-            <!-- <?php if (have_rows('menu', 'option')) : ?>
+            <?php if (have_rows('menu', 'option')) : ?>
               <?php while (have_rows('menu', 'option')) : the_row(); ?>
                 <?php if (get_row_layout() == 'pages') : ?>
-                  <li><a class="nav__link" href="<?php the_sub_field('page_link'); ?>"><?php the_sub_field('title'); ?></a></li>
+                  <li><a class="nav__link" href="<?php the_sub_field('page_link'); ?>"><?php the_sub_field('title'); ?></a>
+                    <?php if (have_rows('sub_menu')) : ?>
+                      <div class="uk-navbar-dropdown xsx">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                          <?php while (have_rows('sub_menu')) : the_row(); ?>
+                            <?php // ACF FIELDS 
+                            $page_link = get_sub_field('page_link');
+                            $title = get_sub_field('title');
+                            ?>
+                            <li><a href="<?php echo $page_link; ?>"><?php echo $title; ?></a></li>
+                          <?php endwhile; ?>
+                        </ul>
+                      </div>
+                    <?php endif; ?>
+                  </li>
                 <?php elseif (get_row_layout() == 'links') : ?>
                   <li><a class="nav__link" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('text'); ?></a></li>
                 <?php endif; ?>
               <?php endwhile; ?>
-            <?php endif; ?> -->
+            <?php endif; ?>
 
           </ul>
           <ul class="uk-navbar-nav uk-inline  uk-hidden@m">
@@ -65,9 +74,12 @@
 
                 </span>
               </a></li>
-          </ul> </div> </div> </div> <!-- END uk-container -->
+          </ul>
         </div>
-        <!-- END nav_type-main -->
+      </div>
+    </div> <!-- END uk-container -->
+  </div>
+  <!-- END nav_type-main -->
 </nav>
 
 <!-- Off Canvas -->
@@ -92,7 +104,6 @@
       <?php endif; ?>
 
     </ul>
-
 
 
   </div>

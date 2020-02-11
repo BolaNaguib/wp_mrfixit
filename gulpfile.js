@@ -21,7 +21,10 @@ const
   concat = require('gulp-concat'),
   stripdebug = require('gulp-strip-debug'),
   uglify = require('gulp-uglify'),
-  notify = require("gulp-notify")
+  notify = require("gulp-notify"),
+  htmlmin = require('gulp-htmlmin'),
+  sourcemaps = require('gulp-sourcemaps')
+
 
 ;
 
@@ -39,9 +42,14 @@ const php = {
 gulp.task('php', () => {
   return gulp.src(php.src)
     .pipe(newer(php.build))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      ignoreCustomFragments: [ /<%[\s\S]*?%>/, /<\?[=|php]?[\s\S]*?\?>/ ]
+    }))
     .pipe(gulp.dest(php.build))
     .pipe(notify("Php Task Done "));
 });
+
 
 // image settings
 const images = {
@@ -87,8 +95,10 @@ var css = {
 // CSS processing
 gulp.task('css', ['images'], () => {
   return gulp.src(css.src)
+    .pipe(sourcemaps.init())
     .pipe(sass(css.sassOpts))
     .pipe(postcss(css.processors))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(css.build))
     .pipe(notify("Css Task Done"))
     .pipe(browsersync ? browsersync.reload({

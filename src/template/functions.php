@@ -23,28 +23,16 @@ function my_acf_init()
             'icon'                => 'admin-comments',
             'keywords'            => array('contact'),
         ));
-        // register cta block
+        // register values block
         acf_register_block(array(
-            'name'                => 'cta',
-            'title'                => __('cta'),
-            'description'        => __('A custom cta block.'),
+            'name'                => 'values',
+            'title'                => __('values'),
+            'description'        => __('A custom values block.'),
             'render_callback'    => 'section_block_callback',
             'enqueue_script'    => get_template_directory_uri() . '/style.css',
             'category'            => 'formatting',
             'icon'                => 'admin-comments',
-            'keywords'            => array('cta'),
-        ));
-
-        // register cardgrid block
-        acf_register_block(array(
-            'name'                => 'cardgrid',
-            'title'                => __('cardgrid'),
-            'description'        => __('A custom cardgrid block.'),
-            'render_callback'    => 'section_block_callback',
-            'enqueue_script'    => get_template_directory_uri() . '/style.css',
-            'category'            => 'formatting',
-            'icon'                => 'admin-comments',
-            'keywords'            => array('cardgrid'),
+            'keywords'            => array('values'),
         ));
         // register contact block
         acf_register_block(array(
@@ -68,17 +56,6 @@ function my_acf_init()
             'icon'                => 'admin-comments',
             'keywords'            => array('services'),
         ));
-        // register map block
-        acf_register_block(array(
-            'name'                => 'map',
-            'title'                => __('map'),
-            'description'        => __('A custom map block.'),
-            'render_callback'    => 'section_block_callback',
-            'enqueue_script'    => get_template_directory_uri() . '/style.css',
-            'category'            => 'formatting',
-            'icon'                => 'admin-comments',
-            'keywords'            => array('map'),
-        ));
         // register Hero block
         acf_register_block(array(
             'name'                => 'Hero',
@@ -89,39 +66,6 @@ function my_acf_init()
             'category'            => 'formatting',
             'icon'                => 'admin-comments',
             'keywords'            => array('hero'),
-        ));
-        // register testimonials block
-        acf_register_block(array(
-            'name'                => 'testimonials',
-            'title'                => __('testimonials'),
-            'description'        => __('A custom testimonials block.'),
-            'render_callback'    => 'section_block_callback',
-            'enqueue_script'    => get_template_directory_uri() . '/style.css',
-            'category'            => 'formatting',
-            'icon'                => 'admin-comments',
-            'keywords'            => array('testimonials'),
-        ));
-        // register reviews block
-        acf_register_block(array(
-            'name'                => 'reviews',
-            'title'                => __('reviews'),
-            'description'        => __('A custom reviews block.'),
-            'render_callback'    => 'section_block_callback',
-            'enqueue_script'    => get_template_directory_uri() . '/style.css',
-            'category'            => 'formatting',
-            'icon'                => 'admin-comments',
-            'keywords'            => array('reviews'),
-        ));
-        // register gallery block
-        acf_register_block(array(
-            'name'                => 'gallery',
-            'title'                => __('gallery'),
-            'description'        => __('A custom gallery block.'),
-            'render_callback'    => 'section_block_callback',
-            'enqueue_script'    => get_template_directory_uri() . '/style.css',
-            'category'            => 'formatting',
-            'icon'                => 'admin-comments',
-            'keywords'            => array('gallery'),
         ));
         // register clients block
         acf_register_block(array(
@@ -191,3 +135,4 @@ if (function_exists('acf_add_options_page')) {
         'parent_slug'    => 'theme-general-settings',
     ));
 }
+?>

@@ -1,21 +1,21 @@
 .wp-block {
   max-width: unset !important;
 }
-.sliderIcon{
+.sliderIcon {
   background-color: $color__secondary;
   border-radius: 100%;
   color: #fff;
   transition: 300ms;
-  &:hover{
+  &:hover {
     background-color: #000;
     color: #fff;
     transition: 300ms;
-
   }
-}   
+}
 
-.pattern{
-  background: url('http://www.creativethemes.co.in/buy-creativetheme-html-template/home-builder/template-multipage/assets/imgs/icons/dots.png') repeat;
+.pattern {
+  background: url("http://www.creativethemes.co.in/buy-creativetheme-html-template/home-builder/template-multipage/assets/imgs/icons/dots.png")
+    repeat;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -42,8 +42,6 @@
 //     width: 100%;
 //   }
 // }
-
-
 
 // .iframe iframe {
 //   width: 100% !important;
@@ -81,7 +79,7 @@
   }
 }
 
-.scroll_button{
+.scroll_button {
   display: inline-block;
   z-index: 9;
   -webkit-animation: bounce 2s infinite;
@@ -114,4 +112,39 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+}
+
+.quick-link {
+  & b {
+    min-width: 30px;
+    display: inline-block;
+  }
+}
+.xsx {
+  background-color: $color__primary;
+  padding: 10px;
+  top: 30px !important;
+}
+.xsx a {
+  position: relative;
+  color: $color__secondary !important;
+  min-height: unset !important;
+  padding: 5px 0px !important;
+  display: inline-block !important;
+  &::before {
+    content: "";
+    background: $color__secondary;
+    height: 2px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+      transition: all 0.5s ease-in-out 0s;
+    }
+  }
 }
