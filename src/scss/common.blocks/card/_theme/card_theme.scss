@@ -35,7 +35,7 @@
     color: #fff;
   }
   & i {
-    min-width: 35px;
+    // min-width: 35px;
   }
   & ul {
     & li {
@@ -45,9 +45,7 @@
         font-size: 8px;
         margin-right: 10px;
         color: #d29100;
-        & i {
-            min-width: unset !important;
-          }
+      
       }
       & small {
         text-shadow: 2px 2px #000;
