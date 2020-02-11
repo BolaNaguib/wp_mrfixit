@@ -42,7 +42,7 @@ $column = get_field('column');
                                 <img src="<?php echo $thumbnail['url'] ?>" alt="<?php echo $thumbnail['alt'] ?> | <?php echo $city ?>" title="<?php echo $thumbnail['title'] ?>">
 
                             </div>
-                            <h4 class="uk-margin-small-top"><?php echo $block_title ;?></small>
+                            <h4 class="uk-margin-small-top"><?php echo $block_title ;?></h4>
                             <small><?php echo $block_content ;?></p>
                             <?php if($page_link): ?>
                         </a>
