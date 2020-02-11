@@ -43,7 +43,7 @@ $column = get_field('column');
 
                             </div>
                             <h4 class="uk-margin-small-top"><?php echo $block_title ;?></h4>
-                            <small><?php echo $block_content ;?></p>
+                            <small><?php echo $block_content ;?></small>
                             <?php if($page_link): ?>
                         </a>
                         <?php endif; ?>
