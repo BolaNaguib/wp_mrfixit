@@ -22,8 +22,10 @@ $map_option = get_field('map', 'options');
 $map_single = get_field('map', $post_id);
 $map = $map_single ? $map_single : $map_option;
 ?>
+
 <!-- START footer -->
-<footer class='section_type-footer'>
+<footer class='section_type-footer' 
+style="  background-image: url('<?php echo get_template_directory_uri() ;?>/images/footer.jpg');">
     <!-- START uk-container -->
     <div class='uk-container'>
         <!-- START uk-grid -->
