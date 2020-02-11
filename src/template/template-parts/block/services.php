@@ -7,7 +7,7 @@ $city = get_field('city', $post_id);
 $section_theme = get_field('section_theme');
 $section_id = get_field('section_id');
 $full_width = get_field('full_width');
-
+$column = get_field('column');
 ?>
 <!-- START section Service -->
 <section id="<?php echo $section_id; ?>" class='section <?php if ($full_width) : ?> full-width <?php else : ?> <?php endif; ?>'>
@@ -23,7 +23,7 @@ $full_width = get_field('full_width');
         <?php endif; ?>
         <?php if (have_rows('block')) : ?>
             <!-- START uk-grid uk-child-width-1-4@m  -->
-            <div class='uk-grid uk-child-width-1-4@m ' uk-grid="uk-margin">
+            <div class='uk-grid uk-child-width-1-<?php echo $column ;?>@m ' uk-grid="uk-margin">
                 <?php while (have_rows('block')) : the_row(); ?>
                 <?php // ACF fields 
                 $page_link = get_sub_field( 'page_link' );
@@ -42,8 +42,8 @@ $full_width = get_field('full_width');
                                 <img src="<?php echo $thumbnail['url'] ?>" alt="<?php echo $thumbnail['alt'] ?> | <?php echo $city ?>" title="<?php echo $thumbnail['title'] ?>">
 
                             </div>
-                            <h3><?php echo $block_title ;?></h3>
-                            <p><?php echo $block_content ;?></p>
+                            <h4 class="uk-margin-small-top"><?php echo $block_title ;?></small>
+                            <small><?php echo $block_content ;?></p>
                             <?php if($page_link): ?>
                         </a>
                         <?php endif; ?>
