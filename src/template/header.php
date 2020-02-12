@@ -65,15 +65,18 @@
                   <li><a class="nav__link" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('text'); ?></a></li>
                 <?php endif; ?>
               <?php endwhile; ?>
+              <li> <a class="nav__link-quote" href="#quote"> get a Quote </a></li>
             <?php endif; ?>
 
           </ul>
-          <ul class="uk-navbar-nav uk-inline  uk-hidden@m">
+          <ul class="uk-navbar-nav uk-hidden@m">
             <li><a href="#offcanvas-overlay" class=" button_type_toggle " uk-toggle="target: #offcanvas-overlay">
                 <span class="" uk-navbar-toggle-icon>
 
                 </span>
               </a></li>
+              <li> <a class="nav__link-quote" href="#quote"> get a Quote </a></li>
+
           </ul>
         </div>
       </div>
