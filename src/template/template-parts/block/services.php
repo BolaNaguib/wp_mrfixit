@@ -23,7 +23,7 @@ $column = get_field('column');
         <?php endif; ?>
         <?php if (have_rows('block')) : ?>
             <!-- START uk-grid uk-child-width-1-4@m  -->
-            <div class='uk-grid uk-child-width-1-<?php echo $column ;?>@m ' uk-grid="uk-margin"  uk-scrollspy="cls: uk-animation-slide-up; target: .card_type-service; delay: 500; repeat: true">
+            <div class='uk-grid uk-child-width-1-<?php echo $column ;?>@m ' uk-grid="uk-margin">
                 <?php while (have_rows('block')) : the_row(); ?>
                 <?php // ACF fields 
                 $page_link = get_sub_field( 'page_link' );
