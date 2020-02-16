@@ -25,7 +25,7 @@ $full_width = get_field('full_width');
                                 $image = get_sub_field('image');
                             ?>
                                 <li class="uk-text-center">
-                                    <img src=" <?php echo $image['url']; ?>" alt=" <?php echo $image['alt']; ?>" title=" <?php echo $image['title']; ?>"> </li>
+                                    <img  loading="lazy" src=" <?php echo $image['url']; ?>" alt=" <?php echo $image['alt']; ?>" title=" <?php echo $image['title']; ?>"> </li>
                             <?php endwhile; ?>
                         </ul>
                     </div>

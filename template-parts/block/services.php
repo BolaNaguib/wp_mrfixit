@@ -17,7 +17,7 @@ $column = get_field('column');
             <!-- START uk-text-center -->
             <div class='uk-text-center uk-margin-bottom'>
                 <h3 class="section__title"> <?php echo $first_color; ?> <span> <?php echo $second_color; ?> </span> </h3>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/border.png" alt="">
+                <img  loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/border.png" alt="">
             </div>
             <!-- END uk-text-center -->
         <?php endif; ?>
@@ -39,7 +39,7 @@ $column = get_field('column');
                         <a href="<?php echo $page_link; ?>">
                         <?php endif; ?>
                             <div class="icon-container uk-position-relative">
-                                <img src="<?php echo $thumbnail['url'] ?>" alt="<?php echo $thumbnail['alt'] ?> | <?php echo $city ?>" title="<?php echo $thumbnail['title'] ?>">
+                                <img  loading="lazy" src="<?php echo $thumbnail['url'] ?>" alt="<?php echo $thumbnail['alt'] ?> | <?php echo $city ?>" title="<?php echo $thumbnail['title'] ?>">
 
                             </div>
                             <h4 class="uk-margin-small-top"><?php echo $block_title ;?></h4>

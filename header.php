@@ -23,9 +23,19 @@
   <?php the_field('header_js_general', 'option');
   the_field('header_js');
   wp_head();
-  $phone_display =  get_field('phone_display', 'option');
-  $phone =  get_field('phone', 'option');
-  $logo = get_field('logo', 'option'); ?>
+
+  $logo = get_field('logo', 'option'); 
+  $post_id =  get_the_ID();
+$city = get_field('city', $post_id);
+// ACF Fields 
+$phone_display_option = get_field('phone_display', 'option');
+$phone_display_single = get_field('phone_display', $post_id);
+$phone_display = $phone_display_single ? $phone_display_single : $phone_display_option;
+
+$phone_option = get_field('phone', 'option');
+$phone_single = get_field('phone', $post_id);
+$phone = $phone_single ? $phone_single : $phone_option;
+?>
 </head>
 <!-- END head -->
 <!-- START body -->
@@ -68,7 +78,7 @@
                   <li><a class="nav__link" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('text'); ?></a></li>
                 <?php endif; ?>
               <?php endwhile; ?>
-              <li> <a class="nav__link-quote" href="#quote"> get a Quote </a></li>
+              <li> <a class="nav__link-quote" href="tel:<?php echo $phone ;?>"> <?php echo $phone_display ;?> </a></li>
             <?php endif; ?>
 
           </ul>
@@ -78,7 +88,7 @@
 
                 </span>
               </a></li>
-              <li> <a class="nav__link-quote" href="#quote"> get a Quote </a></li>
+              <li> <a class="nav__link-quote" href="tel:<?php echo $phone ;?>"> <?php echo $phone_display ;?></a></li>
 
           </ul>
         </div>
