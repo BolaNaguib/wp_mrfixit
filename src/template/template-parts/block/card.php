@@ -50,7 +50,7 @@ $full_width = get_field( 'full_width' );
       <div class='uk-width-1-3@m uk-width-1-1 uk-flex-last <?php if ($media_direction) : ?> uk-flex-first@m <?php endif; ?>'>
         <?php if ($media) : ?>
         <div class="img-border">
-        <img src="<?php echo $media['url'] ?>" alt="<?php echo $media['alt'] ?> | <?php echo $city ;?> " title="<?php echo $media['title'] ?> | <?php echo $city ;?> ">        </div>
+        <img loading="lazy" src="<?php echo $media['url'] ?>" alt="<?php echo $media['alt'] ?> | <?php echo $city ;?> " title="<?php echo $media['title'] ?> | <?php echo $city ;?> ">        </div>
         <?php endif; ?>
       </div>
       <!-- END uk-wodth-1-3 -->

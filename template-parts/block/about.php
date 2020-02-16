@@ -44,7 +44,7 @@ $card_thumbnail = get_field('card_thumbnail');
                     <!-- START div -->
                     <div class='card__thumbnail uk-text-center'  uk-scrollspy="cls:uk-animation-slide-right">
 
-                        <img src="<?php echo $card_thumbnail['url']; ?>" alt="<?php echo $card_thumbnail['alt']; ?>" title="<?php echo $card_thumbnail['title']; ?>">
+                        <img  loading="lazy" src="<?php echo $card_thumbnail['url']; ?>" alt="<?php echo $card_thumbnail['alt']; ?>" title="<?php echo $card_thumbnail['title']; ?>">
                     </div>
                     <!-- END div -->
                 <?php endif; ?>
