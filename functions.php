@@ -106,6 +106,16 @@ function section_block_callback($block)
 /*********************************************
  *               Blocks Styling               *
  **********************************************/
+/**
+ * Proper way to enqueue scripts and styles
+ */
+function wpdocs_theme_name_scripts() {
+    wp_enqueue_style( 'uikit', 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css' );
+    wp_enqueue_style( 'main style', get_template_directory_uri() . '/style.css' );
+}
+add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
+
+
 function am_enqueue_admin_styles()
 {
     wp_register_style('am_admin_uikit', 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css');
