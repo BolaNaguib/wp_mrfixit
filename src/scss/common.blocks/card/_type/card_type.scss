@@ -105,7 +105,8 @@
     margin: 0px;
     color: #002e5b;
   }
-  & .wpcf7-text,.wpcf7-number {
+  & .wpcf7-text,
+  .wpcf7-number {
     display: block;
     width: 97%;
     border: 1px solid #dcdcdc;
@@ -151,140 +152,16 @@
   }
 }
 
-// //  Old
-// .card_type-float {
-//   @include mediaquery_size_m() {
-//     width: 130%;
-//     margin-top: 20px;
-//   }
-//   & a {
-//       color: #fff;
+.card_type-about {
+  & .card__title {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  & .card__content{
+    color: #7b7b7b;
+    text-align: justify;
+  }
+  & .card__thumbnail{
 
-//   }
-// }
-// .card_type-contactform {
-//   // position: relative;
-//   // z-index: -1;
-//   @include mediaquery_size_m() {
-//     padding-left: 150px;
-//   }
-//   & label {
-//     width: 100%;
-//     display: inline-block;
-//   }
-//   & input {
-//     width: 100%;
-//     border-radius: 0;
-//     font-size: 13px;
-//     background: none;
-//     border: none;
-//     border-bottom: 2px solid #f5f5f5;
-//     box-shadow: none;
-//     height: 20px;
-//   }
-//   & textarea {
-//     margin-top: 10px;
-//     width: 100%;
-//     border-radius: 0;
-//     font-size: 13px;
-//     background: none;
-//     border: none;
-//     border-bottom: 2px solid #f5f5f5;
-//     box-shadow: none;
-//   }
-// }
-
-// .card_type-service {
-//   & .card-hover {
-//     transform: scale(0);
-//     transition: 500ms;
-//   }
-//   &:hover {
-//     & .card-hover {
-//       transform: scale(1);
-//       transition: 500ms;
-//     }
-//   }
-// }
-
-// .card_type-values {
-//   text-align: center;
-//   background-color: #00000073;
-//   padding: 20px 10px;
-//   box-shadow: 0px 20px 20px -15px #000;
-//   color: #fff;
-//   & h3 {
-//     color: #fbff00 !important;
-//     font-weight: bold;
-//     font-size: 42px;
-//   }
-// }
-
-// .card_type-testimonial {
-//   border-radius: 10px;
-//   color: #fff;
-//   & h3 {
-//     color: #fff;
-//     font-size: 42px;
-//     margin: 0px !important;
-//   }
-//   & p {
-//     display: -webkit-box;
-//     max-width: 100%;
-//     height: 4.6em;
-//     -webkit-line-clamp: 3;
-//     -webkit-box-orient: vertical;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//   }
-//   & a {
-//     color: $color__secondary;
-//   }
-//   & footer {
-//   }
-//   & blockquote {
-//     margin: 0 0 20px 0;
-//     font-size: 22.5px;
-//     line-height: 1.5;
-//     font-style: italic;
-//     color: #fff;
-//   }
-// }
-
-// .card_type-review {
-//   & a {
-//     color: #fff !important;
-//     & p {
-//       color: #ffc600 !important;
-//     }
-//     & h4 {
-//       color: #fff !important;
-//     }
-//   }
-// }
-
-// .card_type-gallery {
-//   position: relative;
-//   box-shadow: 0px 0px 0px 3px #fff;
-//   & img{
-//     width: 100%;
-//   }
-//   &:hover{
-//     & .hover {
-//       transition: 300ms;
-//       transform: scale(1);
-//       border-radius: 0%;
-
-//     }
-//   }
-//   & .hover {
-//     border-radius: 100%;
-//     position: absolute;
-//     text-align: center;
-//     background-color: #ffffffd9;
-//     color: #092e44;
-//     transform: scale(0);
-//     transition: 300ms;
-//     margin: 5px;
-//   }
-// }
+  }
+}
