@@ -53,7 +53,7 @@ const images = {
 gulp.task('images', () => {
   return gulp.src(images.src)
     .pipe(newer(images.build))
-    .pipe(imagemin())
+    // .pipe(imagemin())
     .pipe(gulp.dest(images.build))
     .pipe(notify("Images Compressed"));
 });
@@ -102,7 +102,7 @@ const syncOpts = {
   proxy: '192.168.33.10',
   files: dir.build + '**/*',
   open: false,
-  notify: false,
+  notify: true,
   ghostMode: false,
   ui: {
     port: 8001

@@ -10,7 +10,9 @@ $full_width = get_field('full_width');
 $column = get_field('column');
 ?>
 <!-- START section Service -->
-<section id="<?php echo $section_id; ?>" class='section <?php if ($full_width) : ?> full-width <?php else : ?> <?php endif; ?>'>
+<section id="<?php echo $section_id; ?>" class='section uk-position-relative <?php if ($full_width) : ?> full-width <?php else : ?> <?php endif; ?>'>
+    <img class="uk-position-center-right zxz" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/fixguy.jpg" alt="">
+
     <!-- START uk-container -->
     <div class='uk-container'>
         <?php if ($first_color || $second_color) : ?>
