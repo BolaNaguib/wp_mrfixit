@@ -99,7 +99,7 @@ $phone = $phone_single ? $phone_single : $phone_option;
 
 
 <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
-  <div class="uk-offcanvas-bar section_theme_white">
+  <div class="uk-offcanvas-bar zxc section_theme_white">
 
     <button class="uk-offcanvas-close" type="button" uk-close></button>
     <br>
