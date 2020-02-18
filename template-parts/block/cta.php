@@ -31,7 +31,7 @@ $cta_content = get_field( 'cta_content' );
             <!-- START uk-width-auto@m -->
             <div class='uk-width-auto@m'>
             <a class="button" href="tel:<?php echo $phone ;?>"> <?php echo $phone_display ;?> </a>
-            <a class="callback" href="#quote"> Request Call Back </a>
+            <a class="callback"  href="#quote" uk-scroll="offset: 50"> Request Call Back </a>
             </div>
             <!-- END uk-width-auto@m -->
         </div>

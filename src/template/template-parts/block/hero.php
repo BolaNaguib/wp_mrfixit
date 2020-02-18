@@ -42,7 +42,7 @@ $full_width = get_field('full_width');
   <!-- END uk-container -->
   <!-- START uk-text-center -->
   <div class="uk-text-center scroll_button">
-    <a class="" href="#about" uk-scroll="offset: 50">
+    <a class="" href="#quote" uk-scroll="offset: 50">
       <img  loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/scroll-dwn.png" alt="">
     </a>
   </div>
