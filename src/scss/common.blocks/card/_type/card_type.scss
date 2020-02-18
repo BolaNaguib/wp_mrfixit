@@ -179,3 +179,48 @@
 
   }
 }
+
+
+
+.card_type-testimonial {
+  border-radius: 10px;
+  color: #fff;
+  & h3 {
+    color: #fff;
+    font-size: 42px;
+    margin: 0px !important;
+  }
+  & p {
+    display: -webkit-box;
+    max-width: 100%;
+    height: 4.6em;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  & a {
+    color: $color__secondary;
+  }
+  & footer {
+  }
+  & blockquote {
+    margin: 0 0 20px 0;
+    font-size: 22.5px;
+    line-height: 1.5;
+    font-style: italic;
+    color: #fff;
+  }
+}
+
+.card_type-review {
+  & a {
+    color: #fff !important;
+    & p {
+      color: #ffc600 !important;
+    }
+    & h4 {
+      color: #fff !important;
+    }
+  }
+}
