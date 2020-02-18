@@ -14,6 +14,8 @@ $phone_option = get_field('phone', 'option');
 $phone_single = get_field('phone', $post_id);
 $phone = $phone_single ? $phone_single : $phone_option;
 
+$cta_content = get_field( 'cta_content' );
+
 ?>
 <!-- START section CARD -->
 <section id="<?php echo $section_id; ?>" class='section_type-cta <?php if ($full_width) : ?> full-width <?php else : ?> <?php endif; ?>  <?php if ($section_theme) : ?> section_theme-blue <?php else : ?> section_theme-white <?php endif; ?>'>
@@ -23,7 +25,7 @@ $phone = $phone_single ? $phone_single : $phone_option;
         <div class='uk-grid uk-gris-small uk-flex uk-flex-middle uk-visible@m'>
             <!-- START uk-width-expand@m -->
             <div class='uk-width-expand@m'>
-                <h4 class="content"> We Wold Like To Herar From You</h4>
+                <h4 class="content"> <?php echo $cta_content  ;?></h4>
             </div>
             <!-- END uk-width-expand@m -->
             <!-- START uk-width-auto@m -->
@@ -39,7 +41,7 @@ $phone = $phone_single ? $phone_single : $phone_option;
              <div class='uk-hidden@m uk-text-center'>
             <!-- START uk-width-expand@m -->
             <div class='uk-width-1-1'>
-                <h4 class="content"> We Wold Like To Herar From You</h4>
+                <h4 class="content"><?php echo $cta_content  ;?></h4>
             </div>
             <!-- END uk-width-expand@m -->
             <!-- START uk-width-auto@m -->
