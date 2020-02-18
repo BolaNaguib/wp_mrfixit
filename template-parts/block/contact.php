@@ -23,6 +23,7 @@ $address_option = get_field('address', 'option');
 $address = $city ? $city : $address_option;
 
 $email = get_field('email', 'option');
+$section_theme = get_field('section_theme');
 
 // Form Block 
 $first_color_title = get_field('first_color_title');
@@ -35,22 +36,26 @@ $full_width = get_field( 'full_width' );
 ?>
 
 <!-- START section Contact -->
-<section id="<?php echo $section_id; ?>"  class='section section_theme-half uk-position-relative uk-visible@m <?php if($full_width): ?> full-width <?php else: ?> <?php endif; ?>'>
+<section id="<?php echo $section_id;?>" class='section <?php if($full_width): ?> full-width <?php else: ?> <?php endif; ?>  <?php if ($section_theme) : ?> section_theme-blue <?php else : ?> section_theme-white <?php endif; ?>'>
   <!-- <div class="pattern"></div> -->
   <!-- START uk-container -->
   <div class='uk-container'>
     <!-- START uk-grid -->
-    <div class='uk-grid uk-child-width-1-2@m  uk-grid-large' uk-grid='uk-margin'>
+    <div class='uk-grid uk-grid-small uk-child-width-1-2@m  uk-grid-large' uk-grid='uk-margin'>
       <!-- START div -->
       <div class=''>
         <!-- START card_type-contactinfo -->
         <div class='card_type-contactinfo'>
           <!-- START uk-text-left -->
           <div class='uk-text-left'>
-            <h3><?php echo $info_title_first_color; ?> <span><?php echo $info_title_second_color; ?></span></h3>
+            <h3 class="section__title"><?php echo $info_title_first_color; ?> <span><?php echo $info_title_second_color; ?></span></h3>
             <hr class="hr_type-small">
+
+            <?php if($info_content): ?>
+            <?php echo $info_content ;?>
+            <?php endif; ?> 
             <?php if (have_rows('info_list')) : ?>
-            <ul class="uk-grid uk-child-width-1-1">
+            <ul class="uk-grid uk-grid-small uk-child-width-1-2@m">
             <?php while (have_rows('info_list')) : the_row(); ?>
             <?php $list = get_sub_field( 'list' ); ?>
               <li class="uk-flex uk-flex-middle">
@@ -68,20 +73,15 @@ $full_width = get_field( 'full_width' );
       <!-- START div -->
       <div class=''>
         <!-- START card_type-contactform -->
-        <div class='card_type-contactform'>
+        <div class='uk-card-default card_type-contactform'>
           <!-- START uk-text-left -->
           <div class='uk-text-left'>
-            <h3><?php echo $first_color_title; ?> <span><?php echo $second_color_title; ?></span></h3>
+            <h3 class="section__title"><?php echo $first_color_title; ?> <span><?php echo $second_color_title; ?></span></h3>
             <hr class="hr_type-small">
           </div>
           <?php echo do_shortcode(' ' . $form_shortcode . ' '); ?>
 
           <!-- END uk-text-left -->
-          <!-- START uk-text-center -->
-          <div class='uk-text-center'>
-            <small>*We will respond within minutes</small>
-          </div>
-          <!-- END uk-text-center -->
         </div>
         <!-- END card_type-contactform -->
       </div>

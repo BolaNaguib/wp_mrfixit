@@ -101,29 +101,40 @@
 }
 
 .card_type-contactform {
-  & h3 {
+  padding: 20px;
+  border-radius: 10px;
+  
+  & .section__title{
+    position: relative;
+    padding: 15px 0px;
+    display: block;
     margin: 0px;
-    color: #002e5b;
-  }
+    padding: 0px;
+    color: #000;
+    font-weight: bold;
+    
+    & span {
+        color: $color__secondary;
+    }
+}
   & .wpcf7-text,
   .wpcf7-number {
+    border: 0 solid;
+    border-radius: 4px;
+    background-color: #eee;
     display: block;
     width: 97%;
-    border: 1px solid #dcdcdc;
-    padding: 10px 0px 10px 10px;
-    border-left: 5px solid #f2ac0e;
+    padding: 15px 0 15px 10px;
     color: #000;
   }
   & .wpcf7-submit {
     background-color: #f2ac0e;
-    padding: 15px 20px;
-    display: block;
-    width: 100%;
+    padding: 10px 20px;
+    display: inline-block;
     border: none;
     color: #fff;
-    font-size: 21px;
     cursor: pointer;
-    transition: 300ms;
+    transition: .3s;
     &:hover {
       transition: 300ms;
       background-color: #d29100;
@@ -132,6 +143,7 @@
 }
 
 .card_type-contactinfo {
+  padding-top: 20px;
   & h3 {
     color: #fff;
     margin: 0px;
@@ -146,7 +158,8 @@
         color: #d29100;
       }
       & b {
-        text-shadow: 2px 2px #000;
+        font-weight: unset;
+        // text-shadow: 2px 2px #000;
       }
     }
   }
