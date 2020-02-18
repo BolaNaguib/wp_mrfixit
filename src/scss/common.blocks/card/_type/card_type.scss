@@ -6,7 +6,8 @@
       text-decoration: none;
     }
   }
-  & h3 {
+  & h6 {
+    font-weight: bold;
     transition: 300ms;
   }
   & .icon-container {
@@ -29,7 +30,7 @@
   }
   &:hover {
     transition: 300ms;
-    & h3 {
+    & h6 {
       color: $color__secondary;
       transition: 300ms;
     }
