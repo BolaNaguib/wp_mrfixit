@@ -149,5 +149,14 @@
   }
 }
 
-.zxz{
-  margin-right: -55px;}
+.social{
+  & a{
+    color: $color__secondary;
+    transition: 300ms;
+    &:hover{
+      color:#fff;
+      transition: 300ms;
+      transform: rotate(360deg);
+    }
+  }
+}

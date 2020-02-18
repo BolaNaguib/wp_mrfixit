@@ -21,11 +21,11 @@ $email = get_field('email', 'option');
 $map_option = get_field('map', 'options');
 $map_single = get_field('map', $post_id);
 $map = $map_single ? $map_single : $map_option;
+
 ?>
 
 <!-- START footer -->
-<footer class='section_type-footer' 
-style="  background-image: url('<?php echo get_template_directory_uri() ;?>/images/footer.jpg');">
+<footer class='section_type-footer' style="  background-image: url('<?php echo get_template_directory_uri(); ?>/images/footer.jpg');">
     <!-- START uk-container -->
     <div class='uk-container'>
         <!-- START uk-grid -->
@@ -40,6 +40,21 @@ style="  background-image: url('<?php echo get_template_directory_uri() ;?>/imag
                         <li><b><i class="fas fa-envelope-open-text"></i></b><?php echo $email; ?></li>
                         <li><b><i class="fas fa-map-marker-alt"></i> </b><?php echo $address; ?></li>
                     </ul>
+                    <?php if (have_rows('social','options')) : ?>
+                        <hr>
+                        <div class="uk-flex uk-flex-center">
+                            <ul class="uk-iconnav social">
+                                <?php while (have_rows('social','options')) : the_row(); 
+                                // ACF FIELDS 
+                                $icon = get_sub_field( 'icon' );
+                                $url = get_sub_field( 'url' );
+                                ?>
+                                    <li> <a href="<?php echo $url;?>"> <?php echo $icon;?></a> </li>
+                                <?php endwhile; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+
                 </div>
                 <!-- END card_type-footer -->
 
