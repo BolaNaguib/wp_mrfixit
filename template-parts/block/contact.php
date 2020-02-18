@@ -36,7 +36,7 @@ $full_width = get_field( 'full_width' );
 ?>
 
 <!-- START section Contact -->
-<section id="<?php echo $section_id;?>" class='section <?php if($full_width): ?> full-width <?php else: ?> <?php endif; ?>  <?php if ($section_theme) : ?> section_theme-blue <?php else : ?> section_theme-white <?php endif; ?>'>
+<section id="quote <?php echo $section_id;?>" class='section <?php if($full_width): ?> full-width <?php else: ?> <?php endif; ?>  <?php if ($section_theme) : ?> section_theme-blue <?php else : ?> section_theme-white <?php endif; ?>'>
   <!-- <div class="pattern"></div> -->
   <!-- START uk-container -->
   <div class='uk-container'>
