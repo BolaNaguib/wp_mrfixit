@@ -13,7 +13,7 @@
 </section>
 
 <!-- START section -->
-<div class='section'>
+<div class=''>
   <!-- START uk-container -->
   <div class='uk-container'>
 
