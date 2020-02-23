@@ -10,7 +10,7 @@ $full_width = get_field('full_width');
 $column = get_field('column');
 ?>
 <!-- START section Service -->
-<section id="<?php echo $section_id; ?>" class='section uk-position-relative <?php if ($full_width) : ?> full-width <?php else : ?> <?php endif; ?>'  uk-scrollspy="cls:uk-animation-fade">
+<section id="<?php echo $section_id; ?>" class='section uk-position-relative <?php if ($full_width) : ?> full-width <?php else : ?> <?php endif; ?>'  >
     <img class="uk-position-center-right zxz"  uk-scrollspy="cls:uk-animation-slide-right" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/fixguy.jpg" alt="">
 
     <!-- START uk-container -->
@@ -25,7 +25,8 @@ $column = get_field('column');
         <?php endif; ?>
         <?php if (have_rows('block')) : ?>
             <!-- START uk-grid uk-child-width-1-4@m  -->
-            <div class='uk-grid uk-grid-small uk-child-width-1-<?php echo $column ;?>@m ' uk-grid="uk-margin">
+            <div class='uk-grid uk-grid-small uk-child-width-1-<?php echo $column ;?>@m ' uk-grid="uk-margin" 
+            uk-scrollspy="cls: uk-animation-slide-bottom; target: .card_type-service; delay: 300;">
                 <?php while (have_rows('block')) : the_row(); ?>
                 <?php // ACF fields 
                 $page_link = get_sub_field( 'page_link' );
@@ -33,10 +34,10 @@ $column = get_field('column');
                 $block_title = get_sub_field( 'block_title' );
                 $block_content = get_sub_field( 'block_content' ); ?>
                     <!-- START div -->
-                    <div class=''  uk-scrollspy="cls:uk-animation-slide-top">
+                    <div class='' uk-scrollspy-class="uk-animation-slide-top" >
                        
                         <!-- START card_type-service -->
-                        <div class='card_type-service uk-text-center'>
+                        <div class='card_type-service uk-text-center' >
                         <?php if($page_link): ?>
                         <a href="<?php echo $page_link; ?>">
                         <?php endif; ?>
