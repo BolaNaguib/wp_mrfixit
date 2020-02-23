@@ -10,8 +10,8 @@ $full_width = get_field('full_width');
 $column = get_field('column');
 ?>
 <!-- START section Service -->
-<section id="<?php echo $section_id; ?>" class='section uk-position-relative <?php if ($full_width) : ?> full-width <?php else : ?> <?php endif; ?>'>
-    <img class="uk-position-center-right zxz" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/fixguy.jpg" alt="">
+<section id="<?php echo $section_id; ?>" class='section uk-position-relative <?php if ($full_width) : ?> full-width <?php else : ?> <?php endif; ?>'  uk-scrollspy="cls:uk-animation-fade">
+    <img class="uk-position-center-right zxz"  uk-scrollspy="cls:uk-animation-slide-right" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/fixguy.jpg" alt="">
 
     <!-- START uk-container -->
     <div class='uk-container'>
@@ -33,7 +33,7 @@ $column = get_field('column');
                 $block_title = get_sub_field( 'block_title' );
                 $block_content = get_sub_field( 'block_content' ); ?>
                     <!-- START div -->
-                    <div class=''>
+                    <div class=''  uk-scrollspy="cls:uk-animation-slide-top">
                        
                         <!-- START card_type-service -->
                         <div class='card_type-service uk-text-center'>
