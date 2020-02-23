@@ -23,7 +23,7 @@ $full_width = get_field( 'full_width' );
 <?php if (have_rows('testimonial')) : ?>
 
     <!-- START uk-grid -->
-    <div class='uk-grid uk-child-width-1-3@m' uk-grid="uk-margin">
+    <div class='uk-grid uk-child-width-1-3@m' uk-grid="uk-margin"   uk-scrollspy="cls: uk-animation-slide-bottom; target: .card_type-testimonial; delay: 300;" > 
     <?php while (have_rows('testimonial')) : the_row(); ?>
     <?php // ACF Fields 
           $caption = get_sub_field( 'caption' );
