@@ -25,7 +25,7 @@ $full_width = get_field( 'full_width' );
     <!-- START uk-grid -->
     <div class='uk-grid uk-flex-middle' uk-grid="uk-margin">
       <!-- START uk-width-1-3@m uk-width-1-1 -->
-      <div class='uk-width-2-3@m uk-width-1-1'>
+      <div class='uk-width-2-3@m uk-width-1-1' <?php if ($media_direction) : ?> uk-scrollspy="cls:uk-animation-slide-left"<?php else; ?>  uk-scrollspy="cls:uk-animation-slide-right" <?php endif; ?>>
       <?php if ($content) : ?>
         <div class="card <?php if ($card_theme) : ?> card_theme_primary <?php else : ?> card_theme-white <?php endif; ?> ">
           <h2 class="card__title"> <?php echo $card_title; ?> <span> <?php echo $city; ?> </span></h2>
@@ -45,9 +45,10 @@ $full_width = get_field( 'full_width' );
         <?php endif; ?>
 
       </div>
+      
       <!-- END uk-width-1-3@m uk-width-1-1 -->
       <!-- START uk-wodth-1-3 -->
-      <div class='uk-width-1-3@m uk-width-1-1 uk-flex-last <?php if ($media_direction) : ?> uk-flex-first@m <?php endif; ?>'>
+      <div class='uk-width-1-3@m uk-width-1-1 uk-flex-last <?php if ($media_direction) : ?> uk-flex-first@m <?php endif; ?>' <?php if ($media_direction) : ?> uk-scrollspy="cls:uk-animation-slide-right"<?php else; ?>  uk-scrollspy="cls:uk-animation-slide-left" <?php endif; ?> >
         <?php if ($media) : ?>
         <div class="img-border">
         <img loading="lazy" src="<?php echo $media['url'] ?>" alt="<?php echo $media['alt'] ?> | <?php echo $city ;?> " title="<?php echo $media['title'] ?> | <?php echo $city ;?> ">        </div>

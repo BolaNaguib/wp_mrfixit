@@ -41,9 +41,9 @@ $full_width = get_field( 'full_width' );
   <!-- START uk-container -->
   <div class='uk-container'>
     <!-- START uk-grid -->
-    <div class='uk-grid uk-grid-small uk-child-width-1-2@m  uk-grid-large' uk-grid='uk-margin'>
+    <div class='uk-grid uk-grid-small uk-child-width-1-2@m  uk-grid-large uk-flex uk-flex-middle' uk-grid='uk-margin'>
       <!-- START div -->
-      <div class=''>
+      <div class=''  uk-scrollspy="cls:uk-animation-slide-left">
         <!-- START card_type-contactinfo -->
         <div class='card_type-contactinfo'>
           <!-- START uk-text-left -->
@@ -71,7 +71,7 @@ $full_width = get_field( 'full_width' );
       </div>
       <!-- END div -->
       <!-- START div -->
-      <div class=''>
+      <div class=''  uk-scrollspy="cls:uk-animation-slide-right">
         <!-- START card_type-contactform -->
         <div class='uk-card-default card_type-contactform'>
           <!-- START uk-text-left -->
