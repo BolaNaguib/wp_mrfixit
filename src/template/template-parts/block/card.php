@@ -54,7 +54,7 @@ $full_width = get_field( 'full_width' );
       <!-- END uk-width-1-3@m uk-width-1-1 -->
       <!-- START uk-wodth-1-3 -->
       <div 
-      class='uk-width-1-3@m uk-width-1-1 uk-flex-last <?php if ($media_direction) : ?> uk-flex-first@m <?php endif: ?>'
+          class='uk-width-1-3@m uk-width-1-1 uk-flex-last <?php if ($media_direction) : ?> uk-flex-first@m <?php endif; ?>'
          <?php if ($media_direction) : ?> 
           uk-scrollspy="cls:uk-animation-slide-right"
           <?php else: ?>
