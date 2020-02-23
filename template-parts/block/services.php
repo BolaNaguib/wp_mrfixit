@@ -34,7 +34,7 @@ $column = get_field('column');
                 $block_title = get_sub_field( 'block_title' );
                 $block_content = get_sub_field( 'block_content' ); ?>
                     <!-- START div -->
-                    <div class='' uk-scrollspy-class="uk-animation-slide-top" >
+                    <div class=''  >
                        
                         <!-- START card_type-service -->
                         <div class='card_type-service uk-text-center' >
