@@ -122,6 +122,17 @@ function my_acf_init()
             'icon'                => 'admin-comments',
             'keywords'            => array('reviews'),
         ));
+        // register content block
+        acf_register_block(array(
+            'name'                => 'content',
+            'title'                => __('content'),
+            'description'        => __('A custom content block.'),
+            'render_callback'    => 'section_block_callback',
+            // 'enqueue_script'    => get_template_directory_uri() . '/style.css',
+            'category'            => 'formatting',
+            'icon'                => 'admin-comments',
+            'keywords'            => array('content'),
+        ));
     }
 }
 /*********************************************
