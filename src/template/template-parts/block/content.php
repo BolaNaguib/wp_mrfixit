@@ -1,5 +1,8 @@
 <?php
 // ACF FIELDS
+$first_color = get_field('first_color');
+$second_color = get_field('second_color');
+// ACF FIELDS
 $content = get_field('content');
 $card_title = get_field('card_title');
 $post_id =  get_the_ID();
