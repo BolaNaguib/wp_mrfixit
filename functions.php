@@ -133,6 +133,17 @@ function my_acf_init()
             'icon'                => 'admin-comments',
             'keywords'            => array('content'),
         ));
+        // register team block
+        acf_register_block(array(
+            'name'                => 'team',
+            'title'                => __('team'),
+            'description'        => __('A custom team block.'),
+            'render_callback'    => 'section_block_callback',
+            // 'enqueue_script'    => get_template_directory_uri() . '/style.css',
+            'category'            => 'formatting',
+            'icon'                => 'admin-comments',
+            'keywords'            => array('team'),
+        ));
     }
 }
 /*********************************************

@@ -104,8 +104,8 @@
 .card_type-contactform {
   padding: 20px;
   border-radius: 10px;
-  
-  & .section__title{
+
+  & .section__title {
     position: relative;
     padding: 15px 0px;
     display: block;
@@ -113,11 +113,11 @@
     padding: 0px;
     color: #000;
     font-weight: bold;
-    
+
     & span {
-        color: $color__secondary;
+      color: $color__secondary;
     }
-}
+  }
   & .wpcf7-text,
   .wpcf7-number {
     border: 0 solid;
@@ -135,7 +135,7 @@
     border: none;
     color: #fff;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
     &:hover {
       transition: 300ms;
       background-color: #d29100;
@@ -171,16 +171,13 @@
     font-size: 48px;
     font-weight: bold;
   }
-  & .card__content{
+  & .card__content {
     color: #7b7b7b;
     text-align: justify;
   }
-  & .card__thumbnail{
-
+  & .card__thumbnail {
   }
 }
-
-
 
 .card_type-testimonial {
   border-radius: 10px;
@@ -223,4 +220,35 @@
       color: #fff !important;
     }
   }
+}
+
+.card_type-team{
+  &:hover{
+    transition: 300ms;
+    & .figure {
+      box-shadow: 0px 15px 20px -10px #00000085;
+      transition: 300ms;
+    }
+    & .title {
+      top: -15px;
+      transition: 300ms;
+    }
+  }
+  & .figure {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 300ms;
+
+  }
+  & .title {
+    background-color: $color__secondary;
+    display: inline-block;
+    padding: 5px 10px;
+    top: -18px;
+    position: relative;
+    border-radius: 5px;
+    transition: 300ms;
+
+  }
+
 }
