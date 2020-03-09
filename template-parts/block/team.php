@@ -11,16 +11,15 @@ $column = get_field('column') ? get_field('column') : 4 ;
 ?>
 <!-- START section Service -->
 <section id="<?php echo $section_id; ?>" class='section uk-position-relative <?php if ($full_width) : ?> full-width <?php else : ?> <?php endif; ?>'>
-    <img class="uk-position-center-right zxz" uk-scrollspy="cls:uk-animation-slide-right" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/fixguy.jpg" alt="">
 
     <!-- START uk-container -->
     <div class='uk-container'>
         <?php if ($first_color || $second_color) : ?>
             <!-- START uk-text-center -->
             <div class='uk-text-center uk-margin-bottom'>
-                <h3 class="section__title"> <?php echo $first_color; ?> <span> <?php echo $second_color; ?> </span> </h3>
+                <h3 class="section__title"> <?php echo $first_color; ?> <span> <?php echo $second_color; ?> in <?php echo $city ;?> </span> </h3>
                 <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/border.png" alt="">
-            </div>
+            </div> 
             <!-- END uk-text-center -->
         <?php endif; ?>
         <?php if (have_rows('block')) : ?>

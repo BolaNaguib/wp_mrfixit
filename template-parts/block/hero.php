@@ -14,6 +14,7 @@ $phone_option = get_field('phone', 'option');
 $phone_single = get_field('phone', $post_id);
 $phone = $phone_single ? $phone_single : $phone_option;
 
+$scroll_to_section = get_field( 'scroll_to_section' );
 $full_width = get_field('full_width'); 
 ?>
 
@@ -40,14 +41,13 @@ $full_width = get_field('full_width');
     <!-- END uk-text-center -->
   </div>
   <!-- END uk-container -->
+
   <!-- START uk-text-center -->
   <div class="uk-text-center scroll_button">
-    <a class="" href="#quote" uk-scroll="offset: 50">
+    <a class="" href="<?php echo $scroll_to_section ;?>" uk-scroll="offset: 50">
       <img  loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/scroll-dwn.png" alt="">
     </a>
   </div>
-
-
   <!-- END uk-text-center -->
 </section>
 <!-- END section -->
