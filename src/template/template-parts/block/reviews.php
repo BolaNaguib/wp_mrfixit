@@ -74,7 +74,7 @@ $full_width = get_field( 'full_width' );
 
 
         </div>
-
+<!-- 
         <div class="uk-text-center uk-padding">
             <span style="color:#ffc600" class="rating-desc" itemscope="" itemtype="http://schema.org/Organization">
                 <span style="color:#fff" itemprop="name">
@@ -111,5 +111,6 @@ $full_width = get_field( 'full_width' );
                 </span>
             </span>
         </div>
+   -->
     </div>
 </section>

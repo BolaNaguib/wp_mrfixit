@@ -21,7 +21,8 @@ const
   concat = require('gulp-concat'),
   stripdebug = require('gulp-strip-debug'),
   uglify = require('gulp-uglify'),
-  notify = require("gulp-notify")
+  notify = require("gulp-notify"),
+  htmlmin = require("gulp-htmlmin")
 
 ;
 
@@ -38,6 +39,10 @@ const php = {
 // copy PHP files
 gulp.task('php', () => {
   return gulp.src(php.src)
+  .pipe(htmlmin({
+    collapseWhitespace: true,
+    ignoreCustomFragments: [ /<%[\s\S]*?%>/, /<\?[=|php]?[\s\S]*?\?>/ ]
+  }))
     .pipe(newer(php.build))
     .pipe(gulp.dest(php.build))
     .pipe(notify("Php Task Done "));
@@ -53,7 +58,7 @@ const images = {
 gulp.task('images', () => {
   return gulp.src(images.src)
     .pipe(newer(images.build))
-    // .pipe(imagemin())
+    .pipe(imagemin())
     .pipe(gulp.dest(images.build))
     .pipe(notify("Images Compressed"));
 });
@@ -102,7 +107,7 @@ const syncOpts = {
   proxy: '192.168.33.10',
   files: dir.build + '**/*',
   open: false,
-  notify: true,
+  notify: false,
   ghostMode: false,
   ui: {
     port: 8001

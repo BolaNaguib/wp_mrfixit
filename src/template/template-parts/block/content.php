@@ -19,7 +19,7 @@ $full_width = get_field( 'full_width' );
   <?php if ($first_color || $second_color) : ?>
        <!-- START uk-text-center -->
        <div class='uk-text-center' style=" margin-bottom: 30px; padding: 10px 0px;">
-                <h2 class="section__title"> <?php echo $first_color; ?><span> <?php echo $second_color; ?></span></h2>
+                <h2 class="section__title"> <?php echo $first_color; ?><span> <?php echo $second_color; ?>  in <?php echo $city ;?></span></h2>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/border.png" alt="">
             </div>
       <!-- END uk-text-center -->
