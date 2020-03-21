@@ -4,7 +4,7 @@
 <!-- START head -->
 
 <head>
-  <title> </title>
+  <title>  <?php the_field('meta_title'); ?>  </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- UIkit CSS -->
@@ -85,7 +85,7 @@
               <button class="button_type_toggle" type="button">
                 <span class="" uk-navbar-toggle-icon></span></button>
               <!-- <div uk-dropdown="mode: click">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div> -->
-              <div class="navbar_type-dropdown" uk-dropdown="mode: click;pos: bottom-justify; boundary: .boundary-align; boundary-align: true">
+              <div class="navbar_type-dropdown" uk-dropdown="mode: click;pos: bottom-justify; boundary: .boundary-align; boundary-align: true" style="display: none;">
                 <ul class="uk-nav ">
                   <?php if (have_rows('menu', 'option')) : ?>
                     <?php while (have_rows('menu', 'option')) : the_row(); ?>
