@@ -82,7 +82,7 @@ $map = $map_single ? $map_single : $map_option;
             <!-- END div -->
 
             <!-- START div -->
-            <div id='locations' class=''>
+            <div class=''>
                 <!-- START card_type-footer -->
                 <div class='card_type-footer'>
                     <h3>LOCATION</h3>
@@ -92,7 +92,7 @@ $map = $map_single ? $map_single : $map_option;
             </div>
             <!-- END div -->
             <!-- START div -->
-            <div class='uk-width-1-1'>
+            <div  id='locations' class='uk-width-1-1'>
                 <!-- START card_type-footer -->
                 <div class='card_type-footer'>
                     <h3>LOCATIONS WE SERVE</h3>

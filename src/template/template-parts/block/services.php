@@ -39,7 +39,7 @@ $column = get_field('column');
                         <!-- START card_type-service -->
                         <div class='card_type-service uk-text-center' >
                         <?php if($page_link): ?>
-                        <a href="<?php echo $page_link; ?>">
+                        <a href="<?php echo $page_link; ?>"  uk-scroll="offset: 50">
                         <?php endif; ?>
                             <div class="icon-container uk-position-relative">
                                 <img  loading="lazy" src="<?php echo $thumbnail['url'] ?>" alt="<?php echo $thumbnail['alt'] ?> | <?php echo $city ?>" title="<?php echo $thumbnail['title'] ?>">

@@ -72,7 +72,7 @@
                     <?php endif; ?>
                   </li>
                 <?php elseif (get_row_layout() == 'links') : ?>
-                  <li><a class="nav__link" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('text'); ?></a></li>
+                  <li><a class="nav__link" href="<?php the_sub_field('link'); ?>"  uk-scroll="offset: 50"><?php the_sub_field('text'); ?></a></li>
                 <?php endif; ?>
               <?php endwhile; ?>
               <li> <a class="nav__link-quote" href="tel:<?php echo $phone; ?>"> <?php echo $phone_display; ?> </a></li>
@@ -92,7 +92,7 @@
                       <?php if (get_row_layout() == 'pages') : ?>
                         <li><a class="nav__link uk-margin-bottom" href="<?php the_sub_field('page_link'); ?>"><?php the_sub_field('title'); ?></a></li>
                       <?php elseif (get_row_layout() == 'links') : ?>
-                        <li><a class="nav__link uk-margin-bottom" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('text'); ?></a></li>
+                        <li><a class="nav__link uk-margin-bottom" href="<?php the_sub_field('link'); ?>"  uk-scroll="offset: 50"><?php the_sub_field('text'); ?></a></li>
                       <?php endif; ?>
                     <?php endwhile; ?>
                   <?php endif; ?>
