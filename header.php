@@ -20,7 +20,7 @@
           <span class="" uk-navbar-toggle-icon>
 
           </span>
-        </a> --><li style="list-style: none;"><a class="nav__link-quote" href="tel:<?php echo $phone; ?>"> <?php echo $phone_display; ?></a></li></div></div></div><!-- END uk-container --><!-- END nav_type-main --></nav><!-- Off Canvas --><!-- <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+        </a> --><!-- <li style="list-style: none;"> <a class="nav__link-quote" href="tel:<?php echo $phone; ?>"> <?php echo $phone_display; ?></a></li> --></div></div></div><!-- END uk-container --><!-- END nav_type-main --></nav><!-- Off Canvas --><!-- <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
   <div class="uk-offcanvas-bar zxc section_theme_white">
 
     <button class="uk-offcanvas-close" type="button" uk-close></button>
