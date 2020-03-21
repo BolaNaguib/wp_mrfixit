@@ -42,7 +42,7 @@ $map = $map_single ? $map_single : $map_option;
                     </ul>
                     <?php if (have_rows('social','options')) : ?>
                         <hr>
-                        <div class="uk-flex uk-flex-center">
+                        <div class="uk-flex">
                             <ul class="uk-iconnav social">
                                 <?php while (have_rows('social','options')) : the_row(); 
                                 // ACF FIELDS 
@@ -82,7 +82,7 @@ $map = $map_single ? $map_single : $map_option;
             <!-- END div -->
 
             <!-- START div -->
-            <div class=''>
+            <div id='locations' class=''>
                 <!-- START card_type-footer -->
                 <div class='card_type-footer'>
                     <h3>LOCATION</h3>
