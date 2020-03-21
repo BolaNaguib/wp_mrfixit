@@ -3,6 +3,37 @@
     "title": "Block: Team",
     "fields": [
         {
+            "key": "field_5e7549ea6ff4d",
+            "label": "column",
+            "name": "column",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6"
+            },
+            "default_value": [
+                4
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_5e60c7e8a1dbc",
             "label": "Block",
             "name": "block",
@@ -122,5 +153,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1583401143
+    "modified": 1584744986
 }
