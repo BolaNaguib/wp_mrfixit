@@ -168,3 +168,14 @@
 body{
   overflow: overlay;
 }
+.footer_block_title {
+  & a {
+    color: $color__secondary;
+    transition: 300ms;
+    &:hover {
+      color: #fff;
+      transition: 300ms;
+      text-decoration: none;
+    }
+  }
+}
