@@ -134,7 +134,11 @@ $map = $map_single ? $map_single : $map_option;
 
 <?php wp_footer() ?>
 
-
+<script>
+	let $cityx = $("#citynamex").attr( "title" );
+	$("#cityname").val($cityx);
+	console.log("CITYX = " + $cityx )
+</script>
 </body>
 
 </html>
