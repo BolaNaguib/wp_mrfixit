@@ -124,6 +124,8 @@ $map = $map_single ? $map_single : $map_option;
     </div>
     <!-- END uk-container -->
 </footer>
+<h3 class="uk-hidden" id="citynamex" title="<?php the_field(city); ?>"><?php the_field(city); ?></h3>
+
 <!-- END footer -->
 
 <!-- UIkit JS -->
