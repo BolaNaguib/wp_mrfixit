@@ -7,7 +7,7 @@
 .section_type-hero {
   color: #fff;
   position: relative;
-  height: 75vh;
+  height: 100vh;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -34,16 +34,32 @@
   }
   & h1 {
     text-shadow: 3px 3px #000;
+    font-size: 23px;
+    @include mediaquery_size_m(){
+      font-size: 2.23125rem;
+  
+    }
+
+   
   }
   & .callback {
     display: inline-block;
-    padding: 15px 30px;
-    font-size: 32px;
+ 
+    
+    padding: 10px 25px;
+    font-size: 21px;
     background-color: #002e5b;
     color: #fff;
     text-shadow: 1px 2px #000;
     box-shadow: 0px 30px 20px -20px #000;
     border-radius: 10px;
+
+    @include mediaquery_size_m(){
+      padding: 15px 30px;
+      font-size: 32px;
+  
+    }
+
   }
 }
 
