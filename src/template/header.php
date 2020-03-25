@@ -47,7 +47,11 @@
       <div class="uk-navbar" uk-navbar>
         <div class="uk-navbar-left">
           <a style="position:fixed; top:5px;     z-index: 999;" href="/">
-            <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>">
+          <picture>
+  <source srcset="<?php echo get_template_directory_uri(); ?>/images/mrfixit-logo.webp" type="image/webp">
+  <source srcset="<?php echo $logo['url']; ?>" type="image/jpeg"> 
+  <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>">
+</picture>
           </a>
 
         </div>
