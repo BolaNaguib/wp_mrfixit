@@ -114,7 +114,7 @@
           </span>
         </a> -->
         </li>
-        <li style="list-style: none;"> <a class="nav__link-quote" href="tel:<?php echo $phone; ?>"> <?php echo $phone_display; ?></a></li>
+        <li class=" uk-hidden@m"  style="list-style: none;"> <a class="nav__link-quote" href="tel:<?php echo $phone; ?>"> <?php echo $phone_display; ?></a></li>
 
         </ul>
       </div>
