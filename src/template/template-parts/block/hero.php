@@ -28,7 +28,7 @@ $full_width = get_field('full_width');
       <h1> <?php echo $hero_title; ?> <?php echo $city; ?> </h1>
       <br>
       <div>
-        <a class="callback" href="<?php echo $phone; ?>"><?php echo $phone_display; ?></a>
+        <a class="callback" href="tel:<?php echo $phone; ?>"><?php echo $phone_display; ?></a>
       </div>
       <div>
         <br>
