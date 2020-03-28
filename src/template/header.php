@@ -102,19 +102,11 @@
                       <?php endif; ?>
                     <?php endwhile; ?>
                   <?php endif; ?>
-
                 </ul>
               </div>
-        </div>
-
-
-        <!-- <a href="#offcanvas-overlay" class=" button_type_toggle " uk-toggle="target: #offcanvas-overlay">
-          <span class="" uk-navbar-toggle-icon>
-
-          </span>
-        </a> -->
+              
         </li>
-        <li class=" uk-hidden@l"  style="list-style: none;"> <a class="nav__link-quote" href="tel:<?php echo $phone; ?>"> <?php echo $phone_display; ?></a></li>
+        <li style="list-style: none;"> <a class="nav__link-quote" href="tel:<?php echo $phone; ?>"> <?php echo $phone_display; ?></a></li>
 
         </ul>
       </div>
@@ -127,28 +119,6 @@
 <!-- Off Canvas -->
 
 
-<!-- <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
-  <div class="uk-offcanvas-bar zxc section_theme_white">
 
-    <button class="uk-offcanvas-close" type="button" uk-close></button>
-    <br>
-    <br>
-    <br>
-    <ul class="uk-nav ">
-      <?php if (have_rows('menu', 'option')) : ?>
-        <?php while (have_rows('menu', 'option')) : the_row(); ?>
-          <?php if (get_row_layout() == 'pages') : ?>
-            <li><a class="nav__link uk-margin-bottom" href="<?php the_sub_field('page_link'); ?>"><?php the_sub_field('title'); ?></a></li>
-          <?php elseif (get_row_layout() == 'links') : ?>
-            <li><a class="nav__link uk-margin-bottom" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('text'); ?></a></li>
-          <?php endif; ?>
-        <?php endwhile; ?>
-      <?php endif; ?>
-
-    </ul>
-
-
-  </div>
-</div> -->
 
 <body>
