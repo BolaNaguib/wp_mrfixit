@@ -102,7 +102,7 @@
                       <?php endif; ?>
                     <?php endwhile; ?>
                   <?php endif; ?>
-                </ul>
+                </ul> 
               </div>
               
         </li>
