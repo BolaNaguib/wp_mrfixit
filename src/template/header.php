@@ -85,7 +85,7 @@
             <?php endif; ?>
 
           </ul>
-          <ul class="uk-navbar-nav uk-hidden@m">
+          <ul class="uk-navbar-nav uk-hidden@m  uk-flex-middle uk-flex">
             <li>
 
               <button class="button_type_toggle" type="button">
