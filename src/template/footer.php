@@ -91,8 +91,13 @@ $map = $map_single ? $map_single : $map_option;
                 <!-- END card_type-footer -->
             </div>
             <!-- END div -->
-            <!-- START div -->
-            <div  id='locations' class='uk-width-1-1'>
+    
+        </div>
+        <!-- END uk-grid -->
+        <br>
+
+                <!-- START div -->
+                <div  id='locations' class='uk-width-1-1'>
                 <!-- START card_type-footer -->
                 <div class='card_type-footer'>
                 <h3 class="footer_block_title" style="color:#fff;">We Service <a href="https://mrfixitdoors.com/palm-beach-county/">Palm Beach County</a>,<a href="https://mrfixitdoors.com/broward-county/"> Broward County</a> & <a href="https://mrfixitdoors.com/martin-county/">Martin County</a>, FL  </h3>
@@ -111,8 +116,6 @@ $map = $map_single ? $map_single : $map_option;
 
             </div>
             <!-- END div -->
-        </div>
-        <!-- END uk-grid -->
         <br>
         <!-- START uk-text-center -->
         <div class='uk-text-center'>
@@ -129,9 +132,9 @@ $map = $map_single ? $map_single : $map_option;
 <!-- END footer -->
 
 <!-- UIkit JS -->
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script> -->
 
 
 <?php wp_footer() ?>
