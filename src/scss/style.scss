@@ -20,6 +20,8 @@ $global-link-color: #DA7D02;
 // 4. Import UIkit.
 @import "uikit/scss/uikit-theme.scss";
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 @import "common.mixins/common.mixins";
 @import "common.variables/common.variables";
 @import "common.globals/common.globals";
