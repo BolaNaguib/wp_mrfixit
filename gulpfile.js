@@ -22,9 +22,9 @@ const
   stripdebug = require('gulp-strip-debug'),
   uglify = require('gulp-uglify'),
   notify = require("gulp-notify"),
-  htmlmin = require("gulp-htmlmin")
-
-;
+  htmlmin = require("gulp-htmlmin"),
+  purgecss = require('gulp-purgecss')
+  ;
 
 // Browser-sync
 var browsersync = false;
@@ -37,12 +37,12 @@ const php = {
 };
 
 // copy PHP files
-gulp.task('php', () => {
+gulp.task('php', ['purgecss'], () => {
   return gulp.src(php.src)
-  .pipe(htmlmin({
-    collapseWhitespace: true,
-    ignoreCustomFragments: [ /<%[\s\S]*?%>/, /<\?[=|php]?[\s\S]*?\?>/ ]
-  }))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      ignoreCustomFragments: [/<%[\s\S]*?%>/, /<\?[=|php]?[\s\S]*?\?>/]
+    }))
     .pipe(newer(php.build))
     .pipe(gulp.dest(php.build))
     .pipe(notify("Php Task Done "));
@@ -68,7 +68,7 @@ gulp.task('images', () => {
 var css = {
   src: dir.src + 'scss/style.scss',
   watch: dir.src + 'scss/**/*',
-  build: dir.build,
+  build: dir.src + 'style',
   sassOpts: {
     outputStyle: 'nested',
     imagePath: images.build,
@@ -90,7 +90,7 @@ var css = {
 };
 
 // CSS processing
-gulp.task('css', ['images'], () => {
+gulp.task('css', ['images', 'purgecss'], () => {
   return gulp.src(css.src)
     .pipe(sass(css.sassOpts))
     .pipe(postcss(css.processors))
@@ -101,17 +101,37 @@ gulp.task('css', ['images'], () => {
     }) : gutil.noop());
 });
 
+gulp.task('purgecss', () => {
+  return gulp.src(dir.src + 'style/**/*.css')
+    .pipe(purgecss({
+      content: ['src/template/**/*.php'],
+      defaultExtractor: content => content.match(/[@A-Za-z0-9-_:/]+/g) || [],
+      // extractors: [
+      //   {
+      //     extractor: class {
+      //       static extract(content) {
+      //         return content.match(/[A-z0-9-_@:\/]+/g) || []
+      //       }
+      //     },
+      //     // Specify all necessary file types. There is no fallback to default.
+      //     extensions: ['css', 'js', 'vue']
+      //   }
+      // ]
+    }))
+    .pipe(gulp.dest(dir.build))
+})
 
 // Browsersync options
 const syncOpts = {
-  proxy: '192.168.33.10',
+  proxy: 'nilefiber.localhost',
+  host: 'nilefiber.localhost',
   files: dir.build + '**/*',
   open: false,
   notify: false,
-  ghostMode: false,
-  ui: {
-    port: 8001
-  }
+  // ghostMode: false,
+  // ui: {
+  //   port: 8001
+  // }
 };
 
 
@@ -147,14 +167,14 @@ gulp.task('js', () => {
 
 });
 
-  gulp.task('build', ['php', 'css', 'js']);
+gulp.task('build', ['php', 'css', 'purgecss', 'js']);
 
 
-  // watch for file changes
-  gulp.task('watch', ['browsersync'], () => {
+// watch for file changes
+gulp.task('watch', ['browsersync'], () => {
 
   // page changes
-  gulp.watch(php.src, ['php'], browsersync ? browsersync.reload : {});
+  gulp.watch(php.src, ['php', 'purgecss'], browsersync ? browsersync.reload : {});
 
   // image changes
   gulp.watch(images.src, ['images']);
