@@ -24,7 +24,7 @@ $column = get_field('column') ? get_field('column') : 4 ;
         <?php endif; ?>
         <?php if (have_rows('block')) : ?>
             <!-- START uk-grid uk-child-width-1-4@m  -->
-            <div class='uk-grid uk-grid-small uk-child-width-1-<?php echo $column; ?>@m ' uk-grid="uk-margin" uk-scrollspy="cls: uk-animation-slide-bottom; target: .card_type-service; delay: 300;">
+            <div class='uk-grid uk-grid-small uk-child-width-1-<?php echo $column; ?>@m ' uk-grid="uk-margin" >
                 <?php while (have_rows('block')) : the_row(); ?>
                     <?php // ACF fields 
                     $thumbnail = get_sub_field('thumbnail');

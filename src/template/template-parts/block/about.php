@@ -19,7 +19,7 @@ $card_thumbnail = get_field('card_thumbnail');
     <div class='uk-container'>
         <?php if ($first_color || $second_color) : ?>
             <!-- START uk-text-center -->
-            <div class='uk-text-center uk-margin-bottom' uk-scrollspy="cls:uk-animation-slide-top">
+            <div class='uk-text-center uk-margin-bottom' >
                 <h3 class="section__title"> <?php echo $first_color; ?> <span> <?php echo $second_color; ?> </span> </h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/border.png" alt="">
             </div>
@@ -28,21 +28,21 @@ $card_thumbnail = get_field('card_thumbnail');
             <div class='uk-grid uk-child-width-1-3@m card_type-about' uk-grid="uk-margin">
                 <?php if ($card_title) : ?>
                     <!-- START div -->
-                    <div class=' uk-text-center  uk-text-right@m'  uk-scrollspy="cls:uk-animation-slide-left" >
+                    <div class=' uk-text-center  uk-text-right@m'   >
                         <h2 class="card__title"><?php echo $card_title; ?></h2>
                     </div>
                     <!-- END div -->
                 <?php endif; ?>
                 <?php if ($card_content) : ?>
                     <!-- START div -->
-                    <div class='card__content'  uk-scrollspy="cls:uk-animation-slide-bottom">
+                    <div class='card__content'  >
                         <?php echo $card_content; ?>
                     </div>
                     <!-- END div -->
                 <?php endif; ?>
                 <?php if ($card_thumbnail) : ?>
                     <!-- START div -->
-                    <div class='card__thumbnail uk-text-center'  uk-scrollspy="cls:uk-animation-slide-right">
+                    <div class='card__thumbnail uk-text-center'>
 
                         <img  loading="lazy" src="<?php echo $card_thumbnail['url']; ?>" alt="<?php echo $card_thumbnail['alt']; ?>" title="<?php echo $card_thumbnail['title']; ?>">
                     </div>

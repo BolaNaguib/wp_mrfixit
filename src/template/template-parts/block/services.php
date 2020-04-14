@@ -11,7 +11,7 @@ $column = get_field('column');
 ?>
 <!-- START section Service -->
 <section id="<?php echo $section_id; ?>" class='section uk-position-relative <?php if ($full_width) : ?> full-width <?php else : ?> <?php endif; ?>'  >
-    <img class="uk-position-center-right zxz"  uk-scrollspy="cls:uk-animation-slide-right" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/fixguy.jpg" alt="">
+    <img class="uk-position-center-right zxz"  loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/fixguy.jpg" alt="">
 
     <!-- START uk-container -->
     <div class='uk-container'>
@@ -24,9 +24,9 @@ $column = get_field('column');
             <!-- END uk-text-center -->
         <?php endif; ?>
         <?php if (have_rows('block')) : ?>
-            <!-- START uk-grid uk-child-width-1-4@m  -->
+            <!-- START uk-grid uk-child-width-1-4@m  uk-child-width-1-5@m -->
             <div class='uk-grid uk-grid-small uk-child-width-1-<?php echo $column ;?>@m ' uk-grid="uk-margin" 
-            uk-scrollspy="cls: uk-animation-slide-bottom; target: .card_type-service; delay: 300;">
+           >
                 <?php while (have_rows('block')) : the_row(); ?>
                 <?php // ACF fields 
                 $page_link = get_sub_field( 'page_link' );

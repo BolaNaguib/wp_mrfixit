@@ -19,7 +19,7 @@ $full_width = get_field( 'full_width' );
             </div>
             <!-- END uk-text-center -->
         <?php endif; ?>
-        <div class="uk-child-width-1-4@m uk-child-width-1-1" uk-grid  uk-scrollspy="cls: uk-animation-slide-bottom; target: .card_type-review; delay: 300;">
+        <div class="uk-child-width-1-4@m uk-child-width-1-1" uk-grid  >
 
             <?php
             // check if the repeater field has rows of data

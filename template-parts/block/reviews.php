@@ -7,7 +7,7 @@ $city = get_field('city', $post_id);
 $section_id = get_field( 'section_id' );
 $full_width = get_field( 'full_width' );
 
-?> <section id="<?php echo $section_id;?>" class="section <?php if($full_width): ?> full-width <?php else: ?> <?php endif; ?> section_theme-blue"><div class="uk-container"> <?php if ($first_color || $second_color) : ?> <!-- START uk-text-center --><div class="uk-text-center" style="margin-bottom: 30px; padding: 10px 0px;"><h2 class="section__title"> <?php echo $first_color; ?><span> <?php echo $second_color; ?></span></h2><img src="<?php echo get_template_directory_uri(); ?>/images/border.png" alt=""></div><!-- END uk-text-center --> <?php endif; ?> <div class="uk-child-width-1-4@m uk-child-width-1-1" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .card_type-review; delay: 300;"> <?php
+?> <section id="<?php echo $section_id;?>" class="section <?php if($full_width): ?> full-width <?php else: ?> <?php endif; ?> section_theme-blue"><div class="uk-container"> <?php if ($first_color || $second_color) : ?> <!-- START uk-text-center --><div class="uk-text-center" style="margin-bottom: 30px; padding: 10px 0px;"><h2 class="section__title"> <?php echo $first_color; ?><span> <?php echo $second_color; ?></span></h2><img src="<?php echo get_template_directory_uri(); ?>/images/border.png" alt=""></div><!-- END uk-text-center --> <?php endif; ?> <div class="uk-child-width-1-4@m uk-child-width-1-1" uk-grid> <?php
             // check if the repeater field has rows of data
             if (have_rows('review')) :
                 // loop through the rows of data

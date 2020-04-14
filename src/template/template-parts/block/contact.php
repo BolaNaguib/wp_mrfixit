@@ -43,7 +43,7 @@ $full_width = get_field( 'full_width' );
     <!-- START uk-grid -->
     <div class='uk-grid uk-grid-small uk-child-width-1-2@m  uk-grid-large uk-flex uk-flex-middle' uk-grid='uk-margin'>
       <!-- START div -->
-      <div class=''  uk-scrollspy="cls:uk-animation-slide-left">
+      <div class='' >
         <!-- START card_type-contactinfo -->
         <div class='card_type-contactinfo'>
           <div class="wpcf7-text wpcf7-number wpcf7-submit uk-hidden"></div>
@@ -72,7 +72,7 @@ $full_width = get_field( 'full_width' );
       </div>
       <!-- END div -->
       <!-- START div -->
-      <div class=''  uk-scrollspy="cls:uk-animation-slide-right">
+      <div class=''  >
         <!-- START card_type-contactform -->
         <div class='uk-card-default card_type-contactform'>
           <!-- START uk-text-left -->
