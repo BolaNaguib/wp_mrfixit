@@ -46,6 +46,7 @@ $full_width = get_field( 'full_width' );
       <div class=''  uk-scrollspy="cls:uk-animation-slide-left">
         <!-- START card_type-contactinfo -->
         <div class='card_type-contactinfo'>
+          <div class="wpcf7-text wpcf7-number wpcf7-submit uk-hidden"></div>
           <!-- START uk-text-left -->
           <div class='uk-text-left'>
             <h3 class="section__title"><?php echo $info_title_first_color; ?> <span><?php echo $info_title_second_color; ?></span></h3>
