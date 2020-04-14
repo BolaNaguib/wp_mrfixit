@@ -89,9 +89,12 @@ $map = $map_single ? $map_single : $map_option;
 
             </div>
             <!-- END div -->
-
+            
             <!-- START div -->
             <div class=''>
+                <style>.card_type-footer iframe {
+    width: 100%;
+}</style>
                 <!-- START card_type-footer -->
                 <div class='card_type-footer'>
                     <h3>LOCATION</h3>
