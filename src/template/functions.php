@@ -7,7 +7,7 @@ add_theme_support('post-thumbnails');
 
 function add_enqueue_styles(){
     wp_enqueue_style( 'theme_style',  get_template_directory_uri() . '/style.css');
-    wp_enqueue_style( 'fontawesome',  'https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+    // wp_enqueue_style( 'fontawesome',  'https://use.fontawesome.com/releases/v5.8.1/css/all.css');
     
     // wp_enqueue_style( 'uikit_css',  'https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css');
     wp_enqueue_style( 'google_font',  'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
