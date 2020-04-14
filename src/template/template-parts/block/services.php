@@ -34,7 +34,7 @@ $column = get_field('column');
                 $block_title = get_sub_field( 'block_title' );
                 $block_content = get_sub_field( 'block_content' ); ?>
                     <!-- START div -->
-                    <div class=''  >
+                    <div class='uk-width-1-5@m'  >
                        
                         <!-- START card_type-service -->
                         <div class='card_type-service uk-text-center' >
