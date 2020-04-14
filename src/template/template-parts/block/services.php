@@ -25,8 +25,7 @@ $column = get_field('column');
         <?php endif; ?>
         <?php if (have_rows('block')) : ?>
             <!-- START uk-grid uk-child-width-1-4@m  uk-child-width-1-5@m -->
-            <div class='uk-grid uk-grid-small' uk-grid="uk-margin" 
-           >
+            <div class='uk-grid uk-grid-small' >
                 <?php while (have_rows('block')) : the_row(); ?>
                 <?php // ACF fields 
                 $page_link = get_sub_field( 'page_link' );
