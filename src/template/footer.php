@@ -112,7 +112,7 @@ $map = $map_single ? $map_single : $map_option;
                 <div  id='locations' class='uk-width-1-1'>
                 <!-- START card_type-footer -->
                 <div class='card_type-footer'>
-                <h3 class="footer_block_title" style="color:#fff;">We Service <a href="https://mrfixitdoors.com/palm-beach-county/">Palm Beach County</a>,<a href="https://mrfixitdoors.com/broward-county/"> Broward County</a> & <a href="https://mrfixitdoors.com/martin-county/">Martin County</a>, FL  </h3>
+                <h3 class="footer_block_title" style="color:#fff;">We Service <a href="https://mrfixitdoors.com/palm-beach-county/">Palm Beach County</a>,<a href="https://mrfixitdoors.com/broward-county/"> Broward County</a>, <a href="https://mrfixitdoors.com/martin-county/">Martin County</a> & <a href="https://mrfixitdoors.com/st-lucie-county/">St. Lucie County</a>, FL  </h3>
                     <?php $posts = get_field('cities_we_serve', 'option');
                     if ($posts) : ?>
                         <ul class="uk-list quick-link uk-child-width-1-4@m uk-grid">
