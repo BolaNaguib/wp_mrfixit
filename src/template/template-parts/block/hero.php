@@ -60,7 +60,7 @@ $full_width = get_field('full_width');
   <!-- START uk-container -->
   <div class='uk-container uk-position-relative' style="z-index: 9;">
     <!-- START uk-text-center -->
-    <div class='uk-text-center herotest' style="    padding: 150px 0px;
+    <div class='uk-text-center herotest' style="    padding: 100px 0px;
 ">
       <h1> <?php echo $hero_title; ?> <?php echo $city; ?>, FL </h1>
       <br>
