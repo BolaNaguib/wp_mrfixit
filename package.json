@@ -26,6 +26,7 @@
     "gulp-deporder": "^1.2.0",
     "gulp-imagemin": "^5.0.3",
     "gulp-newer": "^1.4.0",
+    "gulp-penthouse": "^0.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-purgecss": "^2.1.0",
     "gulp-sass": "^4.0.2",
