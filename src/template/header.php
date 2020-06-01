@@ -1048,6 +1048,8 @@
   $phone_option = get_field('phone', 'option');
   $phone_single = get_field('phone', $post_id);
   $phone = $phone_single ? $phone_single : $phone_option;
+  $home = get_field('homepage');
+  $homeurl = $home ? $home : '/';
   ?>
 </head>
 <!-- END head -->
@@ -1059,7 +1061,8 @@
     <div class='uk-container'>
       <div class="uk-navbar" uk-navbar>
         <div class="uk-navbar-left">
-          <a style="position:fixed; top:5px;     z-index: 999;" href="/">
+
+          <a style="position:fixed; top:5px;     z-index: 999;" href="<?php echo $homeurl ?>">
             <picture>
               <source srcset="<?php echo get_template_directory_uri(); ?>/images/mrfixit-logo.webp" type="image/webp">
               <source srcset="<?php echo $logo['url']; ?>" type="image/jpeg">
