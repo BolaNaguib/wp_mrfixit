@@ -26,7 +26,20 @@ $footer = get_field('footer', $post_id);
 
 
 ?>
-
+<a style="    position: fixed;
+    bottom: 0px;
+    padding: 20px 0px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    background-color: #002e5b;
+    color: #fff;
+    font-size: 26px;
+    " class="uk-hidden@m" href="tel:<?php echo $phone ?>">
+    <svg style="width: 15px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-phone fa-w-16">
+        <path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z" class=""></path>
+    </svg>
+    <?php echo $phone_display ?></a>
 <!-- START footer -->
 <footer class='section_type-footer' style="  background-image: url('<?php echo get_template_directory_uri(); ?>/images/footer.jpg');">
     <!-- START uk-container -->
