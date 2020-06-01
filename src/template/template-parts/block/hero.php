@@ -60,7 +60,7 @@ $full_width = get_field('full_width');
   <!-- START uk-container -->
   <div class='uk-container uk-position-relative' style="z-index: 9;">
     <!-- START uk-text-center -->
-    <div class='uk-text-center herotest' style=" padding-top:100px; padding-bottom: 75px;
+    <div class='uk-text-center herotest' style=" padding-top:100px; padding-bottom: 120px;
 ">
       <h1> <?php echo $hero_title; ?> <?php echo $city; ?>, FL </h1>
       <br>
@@ -80,11 +80,11 @@ $full_width = get_field('full_width');
   <!-- END uk-container -->
 
   <!-- START uk-text-center -->
-  <div class="uk-text-center scroll_button">
+  <!-- <div class="uk-text-center scroll_button">
     <a class="" href="<?php echo $scroll_to_section; ?>" uk-scroll="offset: 50">
       <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/scroll-dwn.png" alt="">
     </a>
-  </div>
+  </div> -->
   <!-- END uk-text-center -->
 </section>
 <!-- END section -->
