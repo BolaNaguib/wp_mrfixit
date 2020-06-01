@@ -60,7 +60,7 @@ $full_width = get_field('full_width');
   <!-- START uk-container -->
   <div class='uk-container uk-position-relative' style="z-index: 9;">
     <!-- START uk-text-center -->
-    <div class='uk-text-center herotest' style=" padding-top:50px; padding-bottom: 75px;
+    <div class='uk-text-center herotest' style=" padding-top:100px; padding-bottom: 75px;
 ">
       <h1> <?php echo $hero_title; ?> <?php echo $city; ?>, FL </h1>
       <br>
@@ -68,9 +68,9 @@ $full_width = get_field('full_width');
         <a class="callback" href="tel:<?php echo $phone; ?>"><?php echo $phone_display; ?></a>
       </div>
       <div>
+        <!-- <br>
         <br>
-        <br>
-        <p><?php echo $hero_caption; ?></p>
+        <p><?php echo $hero_caption; ?></p> -->
 
       </div>
 
