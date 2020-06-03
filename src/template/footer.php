@@ -35,11 +35,11 @@ $footer = get_field('footer', $post_id);
     background-color: #002e5b;
     color: #fff;
     font-size: 26px;
-    " class="uk-hidden@m" href="tel:<?php echo $phone ?>">
+    " class="uk-hidden@m changedNumberIcon" href="tel:<?php echo $phone ?>">
     <svg style="width: 15px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-phone fa-w-16">
         <path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z" class=""></path>
     </svg>
-    <?php echo $phone_display ?></a>
+    <span class="changedNumberspan"> <?php echo $phone_display ?></span></a>
 <!-- START footer -->
 <footer class='section_type-footer' style="  background-image: url('<?php echo get_template_directory_uri(); ?>/images/footer.jpg');">
     <!-- START uk-container -->
@@ -52,12 +52,12 @@ $footer = get_field('footer', $post_id);
                 <div class='card_type-footer'>
                     <h3>CONTACT INFO</h3>
                     <ul class="uk-list quick-link">
-                        <li><a class="uk-flex uk-flex-middle" href="tel:<?php echo $phone; ?>"> <b>
+                        <li><a class="uk-flex uk-flex-middle changedNumberIcon " href="tel:<?php echo $phone; ?>"> <b>
                                     <svg style="height: 20px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="mobile-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-mobile-alt fa-w-10">
                                         <path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z" class=""></path>
                                     </svg>
                                     <!-- <i class="fas fa-mobile-alt"></i>  -->
-                                </b> <?php echo $phone_display; ?> </a></li>
+                                </b> <span class="changedNumberspan" style="font-size: 16px;"> <?php echo $phone_display; ?> </span> </a></li>
                         <li class="uk-flex uk-flex-middle"><b>
                                 <svg style="height: 20px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope-open-text" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-envelope-open-text fa-w-16">
                                     <path fill="currentColor" d="M176 216h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16H176c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16zm-16 80c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16H176c-8.84 0-16 7.16-16 16v16zm96 121.13c-16.42 0-32.84-5.06-46.86-15.19L0 250.86V464c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V250.86L302.86 401.94c-14.02 10.12-30.44 15.19-46.86 15.19zm237.61-254.18c-8.85-6.94-17.24-13.47-29.61-22.81V96c0-26.51-21.49-48-48-48h-77.55c-3.04-2.2-5.87-4.26-9.04-6.56C312.6 29.17 279.2-.35 256 0c-23.2-.35-56.59 29.17-73.41 41.44-3.17 2.3-6 4.36-9.04 6.56H96c-26.51 0-48 21.49-48 48v44.14c-12.37 9.33-20.76 15.87-29.61 22.81A47.995 47.995 0 0 0 0 200.72v10.65l96 69.35V96h320v184.72l96-69.35v-10.65c0-14.74-6.78-28.67-18.39-37.77z" class=""></path>
@@ -211,6 +211,42 @@ $footer = get_field('footer', $post_id);
         $("#cityname").val($cityx);
         console.log("CITYX = " + $cityx);
     }, 2000);
+</script>
+
+<script>
+    function changeNumber() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const hasGoogle = urlParams.has('glcid');
+
+        if (hasGoogle) {
+            const newDisplay = '(999) 639-8068';
+            const newPhone = 'tel:9996398068';
+            const x = document.querySelectorAll('.changedNumber');
+            const y = document.querySelectorAll('.changedNumberIcon');
+            const ese = document.querySelectorAll('.changedNumberspan');
+
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].text = newDisplay;
+                x[i].href = newPhone;
+            }
+            for (i = 0; i < y.length; i++) {
+                // x[i].text = newDisplay;
+                y[i].href = newPhone;
+            }
+            for (i = 0; i < ese.length; i++) {
+                ese[i].innerText = newDisplay;
+            }
+
+            console.log('yes it have glcid');
+
+        } else {
+            console.log('no it does not ')
+        }
+
+    }
+    changeNumber();
 </script>
 </body>
 
