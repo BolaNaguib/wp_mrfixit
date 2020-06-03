@@ -232,14 +232,11 @@ $footer = get_field('footer', $post_id);
                 x[i].href = newPhone;
             }
             for (i = 0; i < y.length; i++) {
-                // x[i].text = newDisplay;
                 y[i].href = newPhone;
             }
             for (i = 0; i < ese.length; i++) {
                 ese[i].innerText = newDisplay;
             }
-
-            console.log('yes it have glcid');
 
         } else {
             console.log('no it does not ')
