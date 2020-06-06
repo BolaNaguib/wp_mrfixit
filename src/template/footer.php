@@ -243,7 +243,7 @@ $footer = get_field('footer', $post_id);
         }
 
     }
-    changeNumber();
+    // changeNumber();
 </script>
 </body>
 

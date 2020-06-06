@@ -1049,7 +1049,7 @@
   $phone_single = get_field('phone', $post_id);
   $phone = $phone_single ? $phone_single : $phone_option;
   $home = get_field('homepage');
-  $homeurl = $home ? $home : '/';
+  $homeurl = $home ? $home : '#';
   ?>
 </head>
 <!-- END head -->
