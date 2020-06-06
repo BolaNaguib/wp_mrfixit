@@ -1027,7 +1027,7 @@
   $phone_single = get_field('phone', $post_id);
   $phone = $phone_single ? $phone_single : $phone_option;
   $home = get_field('homepage');
-  $homeurl = $home ? $home : '/';
+  $homeurl = $home ? $home : '#';
   ?> </head><!-- END head --><!-- START body --><nav class="nav"><!-- START nav_type-main --><div class="nav_type-main boundary-align"><!-- START uk-container --><div class="uk-container"><div class="uk-navbar" uk-navbar><div class="uk-navbar-left"><a style="position:fixed; top:5px;     z-index: 999;" href="<?php echo $homeurl ?>"><picture><source srcset="<?php echo get_template_directory_uri(); ?>/images/mrfixit-logo.webp" type="image/webp"><source srcset="<?php echo $logo['url']; ?>" type="image/jpeg"><img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title']; ?>"></picture></a></div><div class="uk-navbar-right"><ul class="uk-navbar-nav uk-visible@m uk-flex uk-flex-middle"> <?php if (have_rows('menu', 'option')) : ?> <?php while (have_rows('menu', 'option')) : the_row(); ?> <?php if (get_row_layout() == 'pages') : ?> <li><a class="nav__link" href="<?php the_sub_field('page_link'); ?>"><?php the_sub_field('title'); ?></a> <?php if (have_rows('sub_menu')) : ?> <div class="uk-navbar-dropdown xsx"><ul class="uk-nav uk-list-divider uk-navbar-dropdown-nav"> <?php while (have_rows('sub_menu')) : the_row(); ?> <?php // ACF FIELDS 
                             $page_link = get_sub_field('page_link');
                             $title = get_sub_field('title');
