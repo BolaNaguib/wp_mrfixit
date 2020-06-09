@@ -205,46 +205,12 @@ $footer = get_field('footer', $post_id);
 <?php wp_footer() ?>
 
 <script>
-    // var x = document.getElementById("txt");
-    setTimeout(function() {
-        let $cityx = $("#citynamex").attr("title");
-        $("#cityname").val($cityx);
-        console.log("CITYX = " + $cityx);
-    }, 2000);
+    let $city = document.getElementById('citynamex').title;
+    document.getElementById('cityname').value = $city;
+    console.log("cityname", document.getElementById('cityname').value);
 </script>
 
-<script>
-    function changeNumber() {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const hasGoogle = urlParams.has('glcid');
 
-        if (hasGoogle) {
-            const newDisplay = '(999) 639-8068';
-            const newPhone = 'tel:9996398068';
-            const x = document.querySelectorAll('.changedNumber');
-            const y = document.querySelectorAll('.changedNumberIcon');
-            const ese = document.querySelectorAll('.changedNumberspan');
-
-            var i;
-            for (i = 0; i < x.length; i++) {
-                x[i].text = newDisplay;
-                x[i].href = newPhone;
-            }
-            for (i = 0; i < y.length; i++) {
-                y[i].href = newPhone;
-            }
-            for (i = 0; i < ese.length; i++) {
-                ese[i].innerText = newDisplay;
-            }
-
-        } else {
-            console.log('no it does not ')
-        }
-
-    }
-    // changeNumber();
-</script>
 </body>
 
 </html>

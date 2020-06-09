@@ -41,38 +41,6 @@ $footer = get_field('footer', $post_id);
                     ?> <!-- START div --><div id="locations" class="uk-width-1-1"><!-- START card_type-footer --><div class="card_type-footer"> <?php the_sub_field('head') ?> <?php $posts = get_sub_field('city');
                                 if ($posts) : ?> <ul class="uk-list quick-link uk-child-width-1-4@m uk-grid"> <?php foreach ($posts as $p) : ?> <li class="uk-margin-remove-top uk-margin-small-bottom"><a href="<?php echo get_permalink($p->ID); ?>" class="uk-flex uk-flex-middle"><span><svg style="width:7px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path></svg> </span> <?php echo get_the_title($p->ID); ?></a></li> <?php endforeach; ?> </ul> <?php endif; ?> </div><!-- END card_type-footer --></div><!-- END div --> <?php endif; ?> <?php endif; ?> <?php endwhile; ?> <?php endif; ?> <br><!-- START uk-text-center --><div class="uk-text-center"><img src="<?php echo $paymentmethods['url']; ?>" alt="<?php echo $paymentmethods['alt']; ?>" title="<?php echo $paymentmethods['title']; ?>"><br><small> <?php echo $copyrights; ?> | Developed by <a style="color:#fff;">xvxlabs.com</a></small></div><!-- END uk-text-center --></div><!-- END uk-container --><!-- START div --></footer><h3 class="uk-hidden" id="citynamex" title="<?php the_field(city); ?>"><?php the_field(city); ?></h3><!-- END footer --><!-- UIkit JS --><!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script> --> <?php wp_footer() ?> <script>// var x = document.getElementById("txt");
-    setTimeout(function() {
-        let $cityx = $("#citynamex").attr("title");
-        $("#cityname").val($cityx);
-        console.log("CITYX = " + $cityx);
-    }, 2000);</script><script>function changeNumber() {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const hasGoogle = urlParams.has('glcid');
-
-        if (hasGoogle) {
-            const newDisplay = '(999) 639-8068';
-            const newPhone = 'tel:9996398068';
-            const x = document.querySelectorAll('.changedNumber');
-            const y = document.querySelectorAll('.changedNumberIcon');
-            const ese = document.querySelectorAll('.changedNumberspan');
-
-            var i;
-            for (i = 0; i < x.length; i++) {
-                x[i].text = newDisplay;
-                x[i].href = newPhone;
-            }
-            for (i = 0; i < y.length; i++) {
-                y[i].href = newPhone;
-            }
-            for (i = 0; i < ese.length; i++) {
-                ese[i].innerText = newDisplay;
-            }
-
-        } else {
-            console.log('no it does not ')
-        }
-
-    }
-    // changeNumber();</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script> --> <?php wp_footer() ?> <script>let $city = document.getElementById('citynamex').title;
+    document.getElementById('cityname').value = $city;
+    console.log("cityname", document.getElementById('cityname').value);</script>
