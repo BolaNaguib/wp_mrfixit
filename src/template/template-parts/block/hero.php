@@ -54,7 +54,7 @@ $full_width = get_field('full_width');
 
 
 <!-- START section Hero -->
-<section class='uk-hidden@m section_type-hero uk-flex uk-flex-middle  <?php if ($full_width) : ?> full-width <?php else : ?> <?php endif; ?>'>
+<section class='uk-hidden@m section_type-hero uk-flex uk-flex-middle  <?php if ($full_width) : ?> full-width <?php else : ?> <?php endif; ?>' style="height:100vh">
   <img style="     height: 100%;   position: absolute;
     z-index: -1;" src=" <?php echo $hero_background['url']; ?>" alt="">
   <!-- START uk-container -->
