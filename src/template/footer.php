@@ -22,6 +22,16 @@ $map_option = get_field('map', 'options');
 $map_single = get_field('map', $post_id);
 $map = $map_single ? $map_single : $map_option;
 
+
+$mapImageOption = get_field('map_image', 'options');
+$mapImageSingle = get_field('mapimagesingle', $post_id);
+$mapImageURL = get_field('map_url', 'options');
+$mapImageSingleURL = get_field('mapimagesingleurl', $post_id);
+
+$mapImage = $mapImageSingle ? $mapImageSingle : $mapImageOption;
+$mapImageURL = $mapImageURL ? $mapImageURL : $mapImageOption;
+
+
 $footer = get_field('footer', $post_id);
 
 
@@ -132,7 +142,22 @@ $footer = get_field('footer', $post_id);
                 <!-- START card_type-footer -->
                 <div class='card_type-footer'>
                     <h3>LOCATION</h3>
+                    <?php if ($mapImage) : ?>
+                        <a href="<?php echo $mapImageURL ?>">
+                            <!-- START mapiframe -->
+                            <div class='mapiframe' style="background-image: url('<?php echo $mapImage['url'] ?>');   min-height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;"">
+
+                        </div>
+                        <!-- END mapiframe -->
+                    </a>
+                <?php else : ?>
                     <?php echo $map; ?>
+
+                <?php endif; ?>
+                  
                 </div>
                 <!-- END card_type-footer -->
             </div>
@@ -154,42 +179,41 @@ $footer = get_field('footer', $post_id);
                                 <?php the_sub_field('head') ?>
                                 <?php $posts = get_sub_field('city');
                                 if ($posts) : ?>
-                                    <ul class="uk-list quick-link uk-child-width-1-4@m uk-grid">
-                                        <?php foreach ($posts as $p) : ?>
-                                            <li class="uk-margin-remove-top  uk-margin-small-bottom">
-                                                <a href="<?php echo get_permalink($p->ID); ?>" class="uk-flex uk-flex-middle"> <span>
-                                                        <svg style="width:7px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10">
-                                                            <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path>
-                                                        </svg>
-                                                    </span> <?php echo get_the_title($p->ID); ?></a>
-                                            </li>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                <?php endif; ?>
+                                    <ul class=" uk-list quick-link uk-child-width-1-4@m uk-grid">
+                                <?php foreach ($posts as $p) : ?>
+                                    <li class="uk-margin-remove-top  uk-margin-small-bottom">
+                                        <a href="<?php echo get_permalink($p->ID); ?>" class="uk-flex uk-flex-middle"> <span>
+                                                <svg style="width:7px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10">
+                                                    <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path>
+                                                </svg>
+                                            </span> <?php echo get_the_title($p->ID); ?></a>
+                                    </li>
+                                <?php endforeach; ?>
+                                </ul>
+                            <?php endif; ?>
                             </div>
                             <!-- END card_type-footer -->
 
-                        </div>
-                        <!-- END div -->
-                    <?php endif; ?>
+                </div>
+                <!-- END div -->
+            <?php endif; ?>
 
-                <?php endif; ?>
-            <?php endwhile; ?>
         <?php endif; ?>
-        <br>
-        <!-- START uk-text-center -->
-        <div class='uk-text-center'>
+    <?php endwhile; ?>
+<?php endif; ?>
+<br>
+<!-- START uk-text-center -->
+<div class='uk-text-center'>
 
-            <img src="<?php echo $paymentmethods['url']; ?>" alt="<?php echo $paymentmethods['alt']; ?>" title="<?php echo $paymentmethods['title']; ?>"><br>
-            <small> <?php echo $copyrights; ?> | Developed by <a style="color:#fff;">xvxlabs.com</a></small>
-        </div>
-        <!-- END uk-text-center -->
-    </div>
-    <!-- END uk-container -->
-    <!-- START div -->
+    <img src="<?php echo $paymentmethods['url']; ?>" alt="<?php echo $paymentmethods['alt']; ?>" title="<?php echo $paymentmethods['title']; ?>"><br>
+    <small> <?php echo $copyrights; ?> | Developed by <a style="color:#fff;">xvxlabs.com</a></small>
+</div>
+<!-- END uk-text-center -->
+            </div>
+            <!-- END uk-container -->
+            <!-- START div -->
 
 </footer>
-
 
 
 <h3 class="uk-hidden" id="citynamex" title="<?php the_field(city); ?>"><?php the_field(city); ?></h3>
